@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}History — Market Briefing{% endblock %}
+{% block page_title %}History{% endblock %}
+{% block content %}
+
+{% if briefings %}
+<div class="section">
+    <div class="history-list">
+        {% for b in briefings %}
+        <a href="/briefing/{{ b.filename }}" class="history-item">
+            <span class="history-date">{{ b.date }}</span>
+            <span class="history-arrow">→</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="no-data"><p>No past briefings yet.</p></div>
+{% endif %}
+
+{% endblock %}

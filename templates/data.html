@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Data — Market Briefing{% endblock %}
+{% block page_title %}Price Data{% endblock %}
+{% block content %}
+
+{% if briefing and briefing.market_data %}
+<div class="section">
+    <div class="table-wrap">
+        <table>
+            <tr><th>Name</th><th>Price</th><th>Change</th><th>Change</th><th>30d</th><th>SMA 20</th><th>RSI</th></tr>
+            {% for category, items in briefing.market_data.items() %}
+            {% if category != "Volatility" and items %}
+            <tr class="cat"><td colspan="7">{{ category }}</td></tr>
+            {% for name, data in items.items() %}
+            <tr>
+                <td class="name">{{ name }}</td>
+                <td class="mono">{{ "{:,.2f}".format(data.price) if data and data.price else "—" }}</td>
+                <td class="mono {{ 'up' if data and data.change_pct >= 0 else 'down' }}">{{ "{:+.2f}%".format(data.change_pct) if data and data.change_pct is defined else "—" }}</td>
+                <td class="mono {{ 'up' if data and data.change >= 0 else 'down' }}">{{ "{:+.2f}".format(data.change) if data and data.change is defined else "—" }}</td>
+                <td class="mono" style="color:#86868b">{{ "{:+.2f}%".format(data.ytd_change_pct) if data and data.ytd_change_pct else "—" }}</td>
+                <td class="mono" style="color:#86868b">{{ data.sma_20 if data and data.sma_20 else "—" }}</td>
+                <td class="mono" style="color:{{ '#30a46c' if data and data.rsi_14 and data.rsi_14 < 40 else '#e5484d' if data and data.rsi_14 and data.rsi_14 > 70 else '#86868b' }}">{{ data.rsi_14|int if data and data.rsi_14 else "—" }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+            {% set vix = briefing.market_data.get("Volatility", {}).get("VIX", {}) %}
+            {% if vix and vix.price %}
+            <tr class="cat"><td colspan="7">Volatility</td></tr>
+            <tr>
+                <td class="name">VIX</td>
+                <td class="mono">{{ vix.price }}</td>
+                <td class="mono {{ 'up' if vix.change_pct >= 0 else 'down' }}">{{ "{:+.2f}%".format(vix.change_pct) if vix.change_pct is defined else "—" }}</td>
+                <td class="mono {{ 'up' if vix.change >= 0 else 'down' }}">{{ vix.change if vix.change is defined else "—" }}</td>
+                <td class="mono" style="color:#86868b">—</td>
+                <td class="mono" style="color:#86868b">—</td>
+                <td class="mono" style="color:#86868b">—</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+</div>
+{% else %}
+<div class="no-data"><p>No data available.</p></div>
+{% endif %}
+
+{% endblock %}

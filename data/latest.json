@@ -1,0 +1,620 @@
+{
+  "date": "Sunday, May 10, 2026",
+  "timestamp": "2026-05-10T13:28:27.946273-04:00",
+  "market_data": {
+    "US Indices": {
+      "S&P 500": {
+        "price": 7398.93,
+        "change": 61.82,
+        "change_pct": 0.84,
+        "high": 7401.5,
+        "low": 7362.97,
+        "volume": 5302740000,
+        "ytd_change_pct": 7.45,
+        "sma_20": 7153.87,
+        "rsi_14": 73.0,
+        "volume_ratio": 1.01,
+        "name": "S&P 500"
+      },
+      "Nasdaq": {
+        "price": 26247.08,
+        "change": 440.88,
+        "change_pct": 1.71,
+        "high": 26248.62,
+        "low": 25944.78,
+        "volume": 9577150000,
+        "ytd_change_pct": 13.21,
+        "sma_20": 24726.2,
+        "rsi_14": 79.0,
+        "volume_ratio": 1.1,
+        "name": "Nasdaq"
+      },
+      "Dow Jones": {
+        "price": 49609.16,
+        "change": 12.19,
+        "change_pct": 0.02,
+        "high": 49830.7,
+        "low": 49486.96,
+        "volume": 456510000,
+        "ytd_change_pct": 2.88,
+        "sma_20": 49177.35,
+        "rsi_14": 52.1,
+        "volume_ratio": 0.93,
+        "name": "Dow Jones"
+      },
+      "Russell 2000": {
+        "price": 2861.21,
+        "change": 21.58,
+        "change_pct": 0.76,
+        "high": 2866.24,
+        "low": 2844.08,
+        "volume": 5302740000,
+        "ytd_change_pct": 7.14,
+        "sma_20": 2780.84,
+        "rsi_14": 59.2,
+        "volume_ratio": 1.01,
+        "name": "Russell 2000"
+      }
+    },
+    "Forex": {
+      "EUR/USD": {
+        "price": 1.18,
+        "change": 0.0,
+        "change_pct": 0.36,
+        "high": 1.18,
+        "low": 1.17,
+        "volume": 0,
+        "ytd_change_pct": 0.98,
+        "sma_20": 1.17,
+        "rsi_14": 56.0,
+        "volume_ratio": 1.0,
+        "name": "EUR/USD"
+      },
+      "GBP/USD": {
+        "price": 1.36,
+        "change": 0.01,
+        "change_pct": 0.56,
+        "high": 1.36,
+        "low": 1.36,
+        "volume": 0,
+        "ytd_change_pct": 0.86,
+        "sma_20": 1.35,
+        "rsi_14": 59.2,
+        "volume_ratio": 1.0,
+        "name": "GBP/USD"
+      },
+      "USD/JPY": {
+        "price": 156.62,
+        "change": 0.11,
+        "change_pct": 0.07,
+        "high": 156.99,
+        "low": 156.43,
+        "volume": 0,
+        "ytd_change_pct": -1.92,
+        "sma_20": 158.64,
+        "rsi_14": 33.9,
+        "volume_ratio": 1.0,
+        "name": "USD/JPY"
+      },
+      "USD/CHF": {
+        "price": 0.78,
+        "change": -0.0,
+        "change_pct": -0.51,
+        "high": 0.78,
+        "low": 0.78,
+        "volume": 0,
+        "ytd_change_pct": -0.89,
+        "sma_20": 0.78,
+        "rsi_14": 46.9,
+        "volume_ratio": 1.0,
+        "name": "USD/CHF"
+      },
+      "USD/CAD": {
+        "price": 1.37,
+        "change": 0.0,
+        "change_pct": 0.11,
+        "high": 1.37,
+        "low": 1.37,
+        "volume": 0,
+        "ytd_change_pct": -0.79,
+        "sma_20": 1.37,
+        "rsi_14": 53.8,
+        "volume_ratio": 1.0,
+        "name": "USD/CAD"
+      },
+      "AUD/USD": {
+        "price": 0.72,
+        "change": 0.0,
+        "change_pct": 0.57,
+        "high": 0.72,
+        "low": 0.72,
+        "volume": 0,
+        "ytd_change_pct": 2.12,
+        "sma_20": 0.72,
+        "rsi_14": 58.7,
+        "volume_ratio": 1.0,
+        "name": "AUD/USD"
+      }
+    },
+    "Commodities": {
+      "Gold": {
+        "price": 4730.7,
+        "change": 30.9,
+        "change_pct": 0.66,
+        "high": 4760.4,
+        "low": 4671.0,
+        "volume": 114845,
+        "ytd_change_pct": -0.25,
+        "sma_20": 4695.98,
+        "rsi_14": 45.1,
+        "volume_ratio": 18.25,
+        "name": "Gold"
+      },
+      "Silver": {
+        "price": 80.86,
+        "change": 1.16,
+        "change_pct": 1.46,
+        "high": 82.16,
+        "low": 78.58,
+        "volume": 36952,
+        "ytd_change_pct": 7.07,
+        "sma_20": 76.68,
+        "rsi_14": 51.6,
+        "volume_ratio": 10.01,
+        "name": "Silver"
+      },
+      "Crude Oil": {
+        "price": 95.42,
+        "change": 0.61,
+        "change_pct": 0.64,
+        "high": 98.64,
+        "low": 93.82,
+        "volume": 211633,
+        "ytd_change_pct": -3.69,
+        "sma_20": 96.47,
+        "rsi_14": 56.9,
+        "volume_ratio": 0.74,
+        "name": "Crude Oil"
+      },
+      "Natural Gas": {
+        "price": 2.76,
+        "change": -0.01,
+        "change_pct": -0.43,
+        "high": 2.85,
+        "low": 2.73,
+        "volume": 117782,
+        "ytd_change_pct": 4.95,
+        "sma_20": 2.68,
+        "rsi_14": 54.5,
+        "volume_ratio": 1.05,
+        "name": "Natural Gas"
+      }
+    },
+    "Sectors": {
+      "Tech (XLK)": {
+        "price": 175.52,
+        "change": 5.83,
+        "change_pct": 3.44,
+        "high": 175.6,
+        "low": 171.3,
+        "volume": 11212000,
+        "ytd_change_pct": 20.54,
+        "sma_20": 158.77,
+        "rsi_14": 83.2,
+        "volume_ratio": 1.06,
+        "name": "Tech (XLK)"
+      },
+      "Financials (XLF)": {
+        "price": 51.24,
+        "change": -0.31,
+        "change_pct": -0.6,
+        "high": 51.74,
+        "low": 51.14,
+        "volume": 29609200,
+        "ytd_change_pct": -0.81,
+        "sma_20": 51.89,
+        "rsi_14": 29.1,
+        "volume_ratio": 0.9,
+        "name": "Financials (XLF)"
+      },
+      "Energy (XLE)": {
+        "price": 55.7,
+        "change": -0.25,
+        "change_pct": -0.45,
+        "high": 56.23,
+        "low": 55.46,
+        "volume": 30555600,
+        "ytd_change_pct": -2.47,
+        "sma_20": 57.06,
+        "rsi_14": 53.1,
+        "volume_ratio": 0.73,
+        "name": "Energy (XLE)"
+      },
+      "Healthcare (XLV)": {
+        "price": 143.49,
+        "change": -1.23,
+        "change_pct": -0.85,
+        "high": 145.07,
+        "low": 143.18,
+        "volume": 10149300,
+        "ytd_change_pct": -3.03,
+        "sma_20": 145.75,
+        "rsi_14": 35.2,
+        "volume_ratio": 1.18,
+        "name": "Healthcare (XLV)"
+      },
+      "Industrials (XLI)": {
+        "price": 173.2,
+        "change": -0.8,
+        "change_pct": -0.46,
+        "high": 175.32,
+        "low": 173.09,
+        "volume": 5880500,
+        "ytd_change_pct": 0.27,
+        "sma_20": 172.62,
+        "rsi_14": 48.7,
+        "volume_ratio": 0.67,
+        "name": "Industrials (XLI)"
+      },
+      "Consumer Disc (XLY)": {
+        "price": 120.2,
+        "change": 0.32,
+        "change_pct": 0.27,
+        "high": 121.13,
+        "low": 119.94,
+        "volume": 6054100,
+        "ytd_change_pct": 5.51,
+        "sma_20": 118.26,
+        "rsi_14": 51.6,
+        "volume_ratio": 0.78,
+        "name": "Consumer Disc (XLY)"
+      }
+    }
+  },
+  "stock_picks": {
+    "buys": [
+      {
+        "ticker": "AAPL",
+        "price": 293.32,
+        "change_pct": 2.05,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 68.9,
+        "above_sma": "True",
+        "volume_ratio": 1.08,
+        "momentum_5d": 5.96,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+6.0%)"
+      },
+      {
+        "ticker": "NVDA",
+        "price": 215.2,
+        "change_pct": 1.75,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 60.3,
+        "above_sma": "True",
+        "volume_ratio": 0.9,
+        "momentum_5d": 8.42,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+8.4%)"
+      },
+      {
+        "ticker": "ORCL",
+        "price": 195.95,
+        "change_pct": 0.7,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 63.0,
+        "above_sma": "True",
+        "volume_ratio": 0.63,
+        "momentum_5d": 8.69,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+8.7%)"
+      },
+      {
+        "ticker": "INTC",
+        "price": 124.92,
+        "change_pct": 13.96,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 88.4,
+        "above_sma": "True",
+        "volume_ratio": 1.53,
+        "momentum_5d": 30.42,
+        "reasons": "above 20d MA with momentum, high volume confirmation, strong 5d momentum (+30.4%), overbought RSI"
+      },
+      {
+        "ticker": "QCOM",
+        "price": 219.09,
+        "change_pct": 8.17,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 86.2,
+        "above_sma": "True",
+        "volume_ratio": 1.6,
+        "momentum_5d": 30.12,
+        "reasons": "above 20d MA with momentum, high volume confirmation, strong 5d momentum (+30.1%), overbought RSI"
+      },
+      {
+        "ticker": "ASML",
+        "price": 1592.02,
+        "change_pct": 4.97,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 61.0,
+        "above_sma": "True",
+        "volume_ratio": 1.23,
+        "momentum_5d": 14.85,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+14.8%)"
+      },
+      {
+        "ticker": "BA",
+        "price": 237.36,
+        "change_pct": 2.74,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 60.3,
+        "above_sma": "True",
+        "volume_ratio": 1.19,
+        "momentum_5d": 7.26,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+7.3%)"
+      }
+    ],
+    "holds": [
+      {
+        "ticker": "AVGO",
+        "price": 430.0,
+        "change_pct": 4.23,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 62.6,
+        "above_sma": "True",
+        "volume_ratio": 1.1,
+        "momentum_5d": 3.24,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "AMD",
+        "price": 455.19,
+        "change_pct": 11.44,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 80.7,
+        "above_sma": "True",
+        "volume_ratio": 1.24,
+        "momentum_5d": 33.28,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+33.3%), overbought RSI"
+      },
+      {
+        "ticker": "GS",
+        "price": 936.48,
+        "change_pct": 1.15,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 48.4,
+        "above_sma": "True",
+        "volume_ratio": 0.85,
+        "momentum_5d": 3.68,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "BLK",
+        "price": 1084.83,
+        "change_pct": 1.6,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 61.2,
+        "above_sma": "True",
+        "volume_ratio": 0.75,
+        "momentum_5d": 3.1,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "DIS",
+        "price": 108.02,
+        "change_pct": -0.59,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 54.2,
+        "above_sma": "True",
+        "volume_ratio": 0.94,
+        "momentum_5d": 6.62,
+        "reasons": "above 20d MA, strong 5d momentum (+6.6%)"
+      }
+    ],
+    "watches": [
+      {
+        "ticker": "CVX",
+        "price": 181.62,
+        "change_pct": -0.48,
+        "signal": "WATCH",
+        "score": -2,
+        "rsi": 47.4,
+        "above_sma": "False",
+        "volume_ratio": 1.28,
+        "momentum_5d": -5.54,
+        "reasons": "weak 5d momentum (-5.5%), below 20d MA"
+      },
+      {
+        "ticker": "COP",
+        "price": 113.87,
+        "change_pct": -0.88,
+        "signal": "WATCH",
+        "score": -2,
+        "rsi": 46.3,
+        "above_sma": "False",
+        "volume_ratio": 0.9,
+        "momentum_5d": -8.84,
+        "reasons": "weak 5d momentum (-8.8%), below 20d MA"
+      },
+      {
+        "ticker": "EOG",
+        "price": 130.03,
+        "change_pct": -0.66,
+        "signal": "WATCH",
+        "score": -2,
+        "rsi": 51.5,
+        "above_sma": "False",
+        "volume_ratio": 0.89,
+        "momentum_5d": -8.18,
+        "reasons": "weak 5d momentum (-8.2%), below 20d MA"
+      },
+      {
+        "ticker": "MSFT",
+        "price": 415.12,
+        "change_pct": -1.34,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 48.4,
+        "above_sma": "False",
+        "volume_ratio": 0.93,
+        "momentum_5d": 0.36,
+        "reasons": "below 20d MA"
+      },
+      {
+        "ticker": "ABBV",
+        "price": 201.55,
+        "change_pct": -0.57,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 47.1,
+        "above_sma": "False",
+        "volume_ratio": 0.71,
+        "momentum_5d": -3.18,
+        "reasons": "below 20d MA"
+      }
+    ]
+  },
+  "headlines": [
+    {
+      "title": "Where Will Amazon Stock Be in 10 Years?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/where-amazon-stock-10-years-171200840.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T17:12:00Z",
+      "summary": ""
+    },
+    {
+      "title": "Cipher Digital (CIFR) Releases Q1 2026 Financial Results",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/cipher-digital-cifr-releases-q1-155428859.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:54:28Z",
+      "summary": ""
+    },
+    {
+      "title": "Needham Maintains Buy Rating on Zeta Global Holdings (ZETA) Stock",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/needham-maintains-buy-rating-zeta-155422323.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:54:22Z",
+      "summary": ""
+    },
+    {
+      "title": "FTAI Aviation (FTAI) Releases Financial Results for Q1 2026",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ftai-aviation-ftai-releases-financial-155415919.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:54:15Z",
+      "summary": ""
+    },
+    {
+      "title": "Bank of America Upgrades\u00a0Ulta Beauty (ULTA) Stock",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/bank-america-upgrades-ulta-beauty-155410999.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:54:10Z",
+      "summary": ""
+    },
+    {
+      "title": "Why One Fund\u2019s $10 Million National Storage Exit May Be More About the Public Storage Deal Than Storage Demand",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/why-one-fund-10-million-171201566.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T17:12:01Z",
+      "summary": ""
+    },
+    {
+      "title": "Oppenheimer Raises PT on QXO (QXO) Stock",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-raises-pt-qxo-qxo-155404175.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:54:04Z",
+      "summary": ""
+    },
+    {
+      "title": "Is Reddit (RDDT) One of the Unstoppable Stocks to Buy in 2026?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/reddit-rddt-one-unstoppable-stocks-155358836.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:58Z",
+      "summary": ""
+    },
+    {
+      "title": "Robinhood Markets (HOOD): Unstoppable Stock to Buy in 2026",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/robinhood-markets-hood-unstoppable-stock-155352862.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:52Z",
+      "summary": ""
+    },
+    {
+      "title": "Here is Why NVIDIA (NVDA) Is Among the Unstoppable Stocks to Buy in 2026",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/why-nvidia-nvda-among-unstoppable-155343510.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:43Z",
+      "summary": ""
+    },
+    {
+      "title": "Are Small-Cap Stocks About to Make a Comeback in 2026?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/small-cap-stocks-comeback-2026-170500337.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T17:05:00Z",
+      "summary": ""
+    },
+    {
+      "title": "Here\u2019s Why Piper Sandler Raised PT on Ameriprise Financial (AMP)",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/why-piper-sandler-raised-pt-155337464.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:37Z",
+      "summary": ""
+    },
+    {
+      "title": "Here\u2019s Why Devon Energy (DVN) Is One of the Most Undervalued High Quality Stock",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/why-devon-energy-dvn-one-155330847.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:30Z",
+      "summary": ""
+    },
+    {
+      "title": "Keefe Bruyette and Mizuho Lowers PT on Arch Capital Group (ACGL)",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/keefe-bruyette-mizuho-lowers-pt-155324436.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:24Z",
+      "summary": ""
+    },
+    {
+      "title": "BMO Raises PT on The Travelers Companies (TRV)",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/bmo-raises-pt-travelers-companies-155303838.html",
+      "source": "Yahoo Finance",
+      "published": "2026-05-10T15:53:03Z",
+      "summary": ""
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI Market Overview",
+      "body": "Equities traded in positive territory across the board, with the major indices posting a steady climb. The average gain of 0.8% suggests measured optimism.\n\nS&P 500 at 7,399 (+0.84%). Nasdaq at 26,247 (+1.71% (tech-led)). Dow at 49,609 (+0.02%). Russell 2000 at 2,861 (+0.76%, outperforming large caps).\n\nBoth gold and crude rose \u2014 unusual combo suggesting broad commodity demand rather than a pure safe-haven or growth narrative.\n\nTop stock picks this morning: AAPL ($293.3, +2.0%), NVDA ($215.2, +1.8%), ORCL ($195.9, +0.7%). These names show the strongest combination of technical momentum and value signals.\n\nOver the trailing 30 days, the S&P 500 is 7.5% above its level a month ago \u2014 a notable move traders will watch for confirmation"
+    },
+    {
+      "title": "Stock Picks",
+      "body": "Based on technical analysis of 5 qualifying names, the strongest BUY signals are:  AAPL at $293.32 (\u25b2+2.05%) \u2014 RSI 69, above 20d MA with momentum, strong 5d momentum (+6.0%). NVDA at $215.20 (\u25b2+1.75%) \u2014 RSI 60, above 20d MA with momentum, strong 5d momentum (+8.4%). ORCL at $195.95 (\u25b2+0.70%) \u2014 RSI 63, above 20d MA with momentum, strong 5d momentum (+8.7%). INTC at $124.92 (\u25b2+13.96%) \u2014 RSI 88, above 20d MA with momentum, high volume confirmation, strong 5d momentum (+30.4%), overbought RSI. QCOM at $219.09 (\u25b2+8.17%) \u2014 RSI 86, above 20d MA with momentum, high volume confirmation, strong 5d momentum (+30.1%), overbought RSI. These recommendations combine RSI momentum, moving average positioning, and volume confirmation. Always perform your own due diligence before trading. On the watch list (potential reversals): CVX (RSI 47), COP (RSI 46), EOG (RSI 52)."
+    },
+    {
+      "title": "Sector Analysis",
+      "body": "Leading: Tech (XLK) (+3.4%). Lagging: Healthcare (XLV) (-0.8%). 4.3% spread suggests moderate sector rotation. Only 2/6 sectors green \u2014 selective market."
+    },
+    {
+      "title": "Commodities Brief",
+      "body": "Gold rising +0.7% to $4,731/oz. Crude up +0.6% to $95.42."
+    },
+    {
+      "title": "FX Overview",
+      "body": "Dollar slightly softer (0.2%). AUDUSD strengthening (+0.6%). GBPUSD strengthening (+0.6%). USDCHF weakening (-0.5%)."
+    },
+    {
+      "title": "Macro Context",
+      "body": "S&P 500 sits comfortably above its 30-day level (+7.5%)."
+    }
+  ],
+  "summary": "S&P 500: 7398.93  \u25b2 +0.84%\nNasdaq: 26247.08  \u25b2 +1.71%\nDow Jones: 49609.16  \u25b2 +0.02%\nRussell 2000: 2861.21  \u25b2 +0.76%\nGold: 4730.7  \u25b2 +0.66%\nSilver: 80.86  \u25b2 +1.46%\nCrude Oil: 95.42  \u25b2 +0.64%\nNatural Gas: 2.76  \u25bc -0.43%\nEUR/USD: 1.18  \u25b2 +0.36%\nGBP/USD: 1.36  \u25b2 +0.56%\nUSD/JPY: 156.62  \u25b2 +0.07%\nUSD/CHF: 0.78  \u25bc -0.51%"
+}

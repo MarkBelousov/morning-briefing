@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}News — Market Briefing{% endblock %}
+{% block page_title %}Headlines{% endblock %}
+{% block content %}
+
+{% if briefing and briefing.headlines %}
+<div class="section">
+    <div class="section-header">
+        <h2>Today's Coverage</h2>
+        <span class="count">{{ briefing.headlines|length }} articles</span>
+    </div>
+    <div class="news-list">
+        {% for h in briefing.headlines %}
+        <div class="news-item">
+            <a href="{{ h.link }}" target="_blank">
+                <div class="news-source">{{ h.source }}</div>
+                <div class="news-title">{{ h.title }}</div>
+                {% if h.summary %}
+                <div class="news-summary">{{ h.summary|striptags|truncate(140) }}</div>
+                {% endif %}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="no-data"><p>No headlines available.</p></div>
+{% endif %}
+
+{% endblock %}

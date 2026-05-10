@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Overview — Market Briefing{% endblock %}
+{% block page_title %}Morning Briefing{% endblock %}
+{% block content %}
+
+{% if briefing %}
+
+{% if ai_overview %}
+<div class="section">
+    <div class="overview-block">
+        {% for p in ai_overview.body.split('\n\n') %}
+        {% if p|trim %}<p>{{ p }}</p>{% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% if briefing.stock_picks and briefing.stock_picks.buys %}
+<div class="section">
+    <div class="section-header">
+        <h2>Top Picks</h2>
+        <span class="count">{{ briefing.stock_picks.buys|length }} signals</span>
+    </div>
+    <div class="picks-grid">
+        {% for pick in briefing.stock_picks.buys[:6] %}
+        <div class="pick-item">
+            <div class="pick-header">
+                <span class="pick-ticker">{{ pick.ticker }}</span>
+                <span class="pick-badge">BUY</span>
+            </div>
+            <div class="pick-price">${{ "{:,.2f}".format(pick.price) }}</div>
+            <div class="pick-change {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</div>
+            <div class="pick-meta">RSI {{ pick.rsi|int }} · {{ pick.reasons }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<div class="section">
+    <div class="section-header">
+        <h2>Market Summary</h2>
+    </div>
+    <div class="glance">
+        {% for cat in ("US Indices", "Commodities") %}
+        {% for name, data in briefing.market_data.get(cat, {}).items() %}
+        {% if data and data.price and loop.index <= 6 %}
+        <div class="glance-item">
+            <div class="glance-label">{{ name }}</div>
+            <div class="glance-value">{{ "{:,.0f}".format(data.price) if data.price >= 100 else "{:,.2f}".format(data.price) }}</div>
+            <div class="glance-change {{ 'up' if data.change_pct >= 0 else 'down' }}">{{ '▲' if data.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(data.change_pct) }}</div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        {% set vix = briefing.market_data.get("Volatility", {}).get("VIX", {}) %}
+        {% if vix and vix.price %}
+        <div class="glance-item">
+            <div class="glance-label">VIX</div>
+            <div class="glance-value">{{ vix.price }}</div>
+            <div class="glance-change {{ 'up' if vix.change_pct >= 0 else 'down' }}">{{ '▲' if vix.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(vix.change_pct) }}</div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% else %}
+<div class="no-data"><p>No briefing yet. Run <code>python3 briefing.py</code> to generate one.</p></div>
+{% endif %}
+
+{% endblock %}

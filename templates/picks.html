@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Stock Picks — Market Briefing{% endblock %}
+{% block page_title %}Stock Picks{% endblock %}
+{% block content %}
+
+{% if briefing and briefing.stock_picks %}
+
+{% set buys = briefing.stock_picks.buys|length %}
+{% set holds = briefing.stock_picks.holds|length %}
+{% set watches = briefing.stock_picks.watches|length %}
+
+<div class="section">
+    <div class="stat-row">
+        <div class="stat-box">
+            <div class="stat-label">Buy</div>
+            <div class="stat-value" style="color:#30a46c;">{{ buys }}</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Hold</div>
+            <div class="stat-value" style="color:#b65700;">{{ holds }}</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Watch</div>
+            <div class="stat-value" style="color:#e5484d;">{{ watches }}</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Tracked</div>
+            <div class="stat-value">{{ buys + holds + watches }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-header">
+        <h2>All Signals</h2>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <tr><th>Ticker</th><th>Price</th><th>Change</th><th>Signal</th><th>RSI</th><th>vs 20d MA</th><th>Volume</th><th>5d Mom</th></tr>
+            {% for pick in briefing.stock_picks.buys %}
+            <tr>
+                <td class="name">{{ pick.ticker }}</td>
+                <td class="mono">${{ "{:,.2f}".format(pick.price) }}</td>
+                <td class="mono {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</td>
+                <td><span class="signal signal-buy">BUY</span></td>
+                <td class="mono">{{ pick.rsi|int }}</td>
+                <td>{{ 'Above' if pick.above_sma else 'Below' }}</td>
+                <td class="mono">{{ pick.volume_ratio }}x</td>
+                <td class="mono {{ 'up' if pick.momentum_5d >= 0 else 'down' }}">{{ "{:+.1f}%".format(pick.momentum_5d) }}</td>
+            </tr>
+            {% endfor %}
+            {% for pick in briefing.stock_picks.holds %}
+            <tr>
+                <td class="name">{{ pick.ticker }}</td>
+                <td class="mono">${{ "{:,.2f}".format(pick.price) }}</td>
+                <td class="mono {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</td>
+                <td><span class="signal signal-hold">HOLD</span></td>
+                <td class="mono">{{ pick.rsi|int }}</td>
+                <td>{{ 'Above' if pick.above_sma else 'Below' }}</td>
+                <td class="mono">{{ pick.volume_ratio }}x</td>
+                <td class="mono {{ 'up' if pick.momentum_5d >= 0 else 'down' }}">{{ "{:+.1f}%".format(pick.momentum_5d) }}</td>
+            </tr>
+            {% endfor %}
+            {% for pick in briefing.stock_picks.watches %}
+            <tr>
+                <td class="name">{{ pick.ticker }}</td>
+                <td class="mono">${{ "{:,.2f}".format(pick.price) }}</td>
+                <td class="mono {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</td>
+                <td><span class="signal signal-watch">WATCH</span></td>
+                <td class="mono">{{ pick.rsi|int }}</td>
+                <td>{{ 'Above' if pick.above_sma else 'Below' }}</td>
+                <td class="mono">{{ pick.volume_ratio }}x</td>
+                <td class="mono {{ 'up' if pick.momentum_5d >= 0 else 'down' }}">{{ "{:+.1f}%".format(pick.momentum_5d) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% else %}
+<div class="no-data"><p>No stock picks yet.</p></div>
+{% endif %}
+
+{% endblock %}

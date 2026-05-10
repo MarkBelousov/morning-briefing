@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #070b14;
+    --surface: #0f1529;
+    --surface2: #1a2240;
+    --border: #1e2a4a;
+    --border-hover: #2d3f6a;
+    --text: #e8edf5;
+    --text2: #8892b0;
+    --text3: #4a5578;
+    --accent: #6366f1;
+    --accent2: #818cf8;
+    --green: #10b981;
+    --green-bg: rgba(16,185,129,0.08);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --blue: #3b82f6;
+    --gold: #f59e0b;
+    --ai-glow: rgba(99,102,241,0.15);
+    --radius: 12px;
+    --radius-lg: 20px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+::selection { background: var(--accent); color: white; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(7,11,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 0 32px; height: 60px; display: flex; align-items: center; gap: 28px; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo .logo-icon { width: 28px; height: 28px; background: linear-gradient(135deg, var(--accent), var(--blue)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: white; }
+.nav-logo span { font-size: 16px; font-weight: 700; letter-spacing: -0.3px; }
+.nav-links { display: flex; gap: 4px; }
+.nav-links a { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--text2); text-decoration: none; transition: all 0.2s; }
+.nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.nav-links a.active { color: var(--accent2); background: rgba(99,102,241,0.1); }
+.nav-spacer { flex: 1; }
+.nav-subscribe { display: flex; align-items: center; gap: 16px; }
+.nav-subscribers { font-size: 12px; color: var(--text3); }
+.nav-subscribers strong { color: var(--text2); font-weight: 600; }
+.nav-btn { padding: 8px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+.nav-btn-primary { background: linear-gradient(135deg, var(--accent), var(--blue)); color: white; }
+.nav-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
+
+.hero { padding: 100px 32px 0; max-width: 1200px; margin: 0 auto; }
+.hero-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.hero-date { font-size: 13px; color: var(--text3); letter-spacing: 0.3px; }
+.hero-date strong { color: var(--text2); font-weight: 500; }
+.hero-live { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--green); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.hero-live .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.hero h1 { font-size: 34px; font-weight: 800; letter-spacing: -1px; background: linear-gradient(135deg, #f8fafc 0%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-sub { font-size: 14px; color: var(--text2); margin-top: 6px; line-height: 1.5; }
+
+.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 24px 0 32px; }
+.glance-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; transition: all 0.25s; cursor: default; opacity: 0; transform: translateY(16px); }
+.glance-card:hover { border-color: var(--border-hover); transform: translateY(-2px) !important; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+.glance-label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 4px; }
+.glance-price { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600; letter-spacing: -0.5px; }
+.glance-change { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; margin-top: 2px; }
+.glance-change.up { color: var(--green); }
+.glance-change.down { color: var(--red); }
+
+.main { max-width: 1200px; margin: 0 auto; padding: 0 32px 60px; }
+
+.ai-section { margin-bottom: 36px; }
+.ai-card { background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(59,130,246,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: var(--radius-lg); padding: 32px; position: relative; overflow: hidden; }
+.ai-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent); }
+.ai-card::after { content: ''; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(99,102,241,0.05) 0%, transparent 70%); pointer-events: none; }
+.ai-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.25); padding: 4px 12px 4px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+.ai-badge .sparkle { font-size: 13px; }
+.ai-card h2 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; letter-spacing: -0.2px; }
+.ai-paragraphs p { font-size: 14px; line-height: 1.75; color: #c8d0e0; margin-bottom: 12px; }
+.ai-paragraphs p:last-child { margin-bottom: 0; }
+
+.tabs { display: flex; gap: 2px; background: var(--surface); padding: 4px; border-radius: var(--radius); border: 1px solid var(--border); width: fit-content; margin-bottom: 24px; }
+.tab { padding: 10px 22px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--text2); cursor: pointer; transition: all 0.2s; border: none; background: none; font-family: inherit; }
+.tab:hover { color: var(--text); }
+.tab.active { background: linear-gradient(135deg, var(--accent), var(--blue)); color: white; }
+
+.panel { display: none; animation: fadeUp 0.35s ease; }
+.panel.active { display: block; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+.news-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.25s; }
+.news-card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.news-card a { display: block; padding: 20px; text-decoration: none; color: inherit; height: 100%; }
+.news-source { display: inline-block; font-size: 10px; font-weight: 600; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+.news-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 8px; }
+.news-summary { font-size: 13px; color: var(--text2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.news-time { font-size: 11px; color: var(--text3); margin-top: 10px; }
+
+.insights-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+.insight-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; transition: all 0.25s; }
+.insight-card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.insight-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 12px; }
+.insight-card h4 { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 10px; }
+.insight-card p { font-size: 14px; line-height: 1.7; color: var(--text); }
+
+.data-section { margin-top: 4px; }
+.data-table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.data-table-wrap table { width: 100%; border-collapse: collapse; }
+.data-table-wrap th { text-align: left; padding: 14px 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text3); background: rgba(255,255,255,0.02); border-bottom: 1px solid var(--border); }
+.data-table-wrap td { padding: 12px 20px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.data-table-wrap tr:last-child td { border: none; }
+.data-table-wrap .category-label td { font-weight: 700; color: var(--accent2); font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; padding-top: 20px; background: rgba(99,102,241,0.03); }
+.data-table-wrap .name { font-weight: 500; }
+.data-table-wrap .mono { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+.data-table-wrap .up { color: var(--green); }
+.data-table-wrap .down { color: var(--red); }
+
+.section-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.section-title .count { font-size: 12px; color: var(--text3); font-weight: 400; }
+
+.no-data { text-align: center; padding: 100px 20px; }
+.no-data h2 { font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--text2); }
+.no-data p { font-size: 14px; color: var(--text3); }
+
+@media (max-width: 768px) {
+    .nav { padding: 0 16px; gap: 12px; }
+    .nav-links { display: none; }
+    .hero { padding: 90px 16px 0; }
+    .hero h1 { font-size: 26px; }
+    .main { padding: 0 16px 40px; }
+    .glance { grid-template-columns: repeat(3, 1fr); }
+    .glance-card { padding: 10px 12px; }
+    .glance-price { font-size: 16px; }
+    .ai-card { padding: 24px 20px; }
+    .news-grid, .insights-grid { grid-template-columns: 1fr; }
+    .tabs { width: 100%; }
+    .tab { flex: 1; text-align: center; padding: 10px 12px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+    <a href="/" class="nav-logo">
+        <div class="logo-icon">M</div>
+        <span>Market Briefing</span>
+    </a>
+    <div class="nav-links">
+        <a href="/" class="active">Briefing</a>
+        <a href="/history">History</a>
+    </div>
+    <div class="nav-spacer"></div>
+    <div class="nav-subscribe">
+        <span class="nav-subscribers"><strong>{{ subscriber_count }}</strong> subscribers</span>
+        <a href="/subscribe" class="nav-btn nav-btn-primary">Subscribe</a>
+    </div>
+</nav>
+
+{% if briefing %}
+
+<div class="hero">
+    <div class="hero-top">
+        <div class="hero-date"><strong>{{ briefing.date }}</strong></div>
+        <div class="hero-live"><span class="dot"></span> Live</div>
+    </div>
+    <h1>Morning Market Briefing</h1>
+    {% set sp500 = briefing.market_data.get("US Indices", {}).get("S&P 500", {}) %}
+    {% if sp500 and sp500.get("change_pct") is defined %}
+    <p class="hero-sub">S&amp;P 500 <span style="color:{{ 'var(--green)' if sp500.change_pct >= 0 else 'var(--red)' }}">{{ '▲' if sp500.change_pct >= 0 else '▼' }}{{ "{:+.2f}%".format(sp500.change_pct) }}</span> · {{ sp500.price|default('—') }}</p>
+    {% endif %}
+</div>
+
+<div class="main">
+
+<div class="glance" id="glanceGrid">
+    {% for cat in ("US Indices", "Commodities") %}
+    {% for name, data in briefing.market_data.get(cat, {}).items() %}
+    {% if data and data.price and loop.index <= 6 %}
+    <div class="glance-card">
+        <div class="glance-label">{{ name }}</div>
+        <div class="glance-price">{{ "{:,.2f}".format(data.price) }}</div>
+        <div class="glance-change {{ 'up' if data.change_pct >= 0 else 'down' }}">{{ '▲' if data.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(data.change_pct) }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    {% set vix = briefing.market_data.get("Volatility", {}).get("VIX", {}) %}
+    {% if vix and vix.price %}
+    <div class="glance-card">
+        <div class="glance-label">VIX</div>
+        <div class="glance-price">{{ vix.price }}</div>
+        <div class="glance-change {{ 'up' if vix.change_pct >= 0 else 'down' }}">{{ '▲' if vix.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(vix.change_pct) }}</div>
+    </div>
+    {% endif %}
+</div>
+
+{% set ai_overview = briefing.insights[0] if briefing.insights and briefing.insights[0].title == "AI Market Overview" else None %}
+{% if ai_overview %}
+<div class="ai-section">
+    <div class="ai-card">
+        <div class="ai-badge">
+            <span class="sparkle">✦</span> AI Overview
+        </div>
+        <div class="ai-paragraphs">
+            {% for paragraph in ai_overview.body.split('\n\n') %}
+            {% if paragraph|trim %}
+            <p>{{ paragraph }}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if briefing.stock_picks and briefing.stock_picks.buys %}
+<div class="ai-section">
+    <div class="ai-card" style="background:linear-gradient(135deg, rgba(16,185,129,0.06), rgba(5,150,105,0.04)); border-color: rgba(16,185,129,0.2);">
+        <div class="ai-badge" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.25);color:var(--green);">
+            <span class="sparkle">✦</span> Top Stock Picks
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+            {% for pick in briefing.stock_picks.buys[:6] %}
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:16px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                    <span style="font-size:15px;font-weight:700;letter-spacing:-0.3px;">{{ pick.ticker }}</span>
+                    <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;background:rgba(16,185,129,0.15);color:var(--green);padding:2px 8px;border-radius:4px;">BUY</span>
+                </div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:600;margin-bottom:4px;">${{ "{:,.2f}".format(pick.price) }}</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:{{ 'var(--green)' if pick.change_pct >= 0 else 'var(--red)' }};">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</div>
+                <div style="margin-top:8px;font-size:11px;color:var(--text3);line-height:1.4;">
+                    RSI {{ pick.rsi|int }} · {{ pick.reasons }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if briefing.stock_picks.watches %}
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.05);">
+            <div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Watch List</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                {% for w in briefing.stock_picks.watches[:4] %}
+                <span style="font-size:11px;background:rgba(245,158,11,0.1);color:var(--gold);padding:3px 10px;border-radius:4px;border:1px solid rgba(245,158,11,0.15);">{{ w.ticker }} (RSI {{ w.rsi|int }})</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+<div class="tabs">
+    <button class="tab active" onclick="switchTab('tab-news', this)">News</button>
+    <button class="tab" onclick="switchTab('tab-picks', this)">Picks</button>
+    <button class="tab" onclick="switchTab('tab-insights', this)">Insights</button>
+    <button class="tab" onclick="switchTab('tab-data', this)">Data</button>
+</div>
+
+<div id="tab-news" class="panel active">
+    {% if briefing.headlines %}
+    <div class="section-title">Headlines <span class="count">· {{ briefing.headlines|length }}</span></div>
+    <div class="news-grid">
+        {% for h in briefing.headlines %}
+        <div class="news-card">
+            <a href="{{ h.link }}" target="_blank">
+                <div class="news-source">{{ h.source }}</div>
+                <div class="news-title">{{ h.title }}</div>
+                {% if h.summary %}
+                <div class="news-summary">{{ h.summary|striptags|truncate(120) }}</div>
+                {% endif %}
+                <div class="news-time">{{ h.published[:16] if h.published else '' }}</div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p style="color:var(--text3);font-size:14px;">No headlines available right now.</p>
+    {% endif %}
+</div>
+
+<div id="tab-picks" class="panel">
+    {% if briefing.stock_picks %}
+    <div class="section-title">All Signals <span class="count">· {{ (briefing.stock_picks.buys|length + briefing.stock_picks.holds|length + briefing.stock_picks.watches|length) }} stocks tracked</span></div>
+    <div class="data-section">
+        <div class="data-table-wrap">
+            <table>
+                <tr><th>Ticker</th><th>Price</th><th>Change</th><th>Signal</th><th>RSI</th><th>vs 20d MA</th><th>Vol Ratio</th><th>5d Mom</th></tr>
+                {% for pick in briefing.stock_picks.buys %}
+                <tr>
+                    <td class="name" style="font-weight:600;">{{ pick.ticker }}</td>
+                    <td class="mono">${{ "{:,.2f}".format(pick.price) }}</td>
+                    <td class="mono {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</td>
+                    <td><span style="font-size:11px;font-weight:700;text-transform:uppercase;background:rgba(16,185,129,0.15);color:var(--green);padding:2px 10px;border-radius:4px;">BUY</span></td>
+                    <td class="mono">{{ pick.rsi|int }}</td>
+                    <td style="color:{{ 'var(--green)' if pick.above_sma else 'var(--red)' }}">{{ 'Above' if pick.above_sma else 'Below' }}</td>
+                    <td class="mono">{{ pick.volume_ratio }}x</td>
+                    <td class="mono {{ 'up' if pick.momentum_5d >= 0 else 'down' }}">{{ "{:+.1f}%".format(pick.momentum_5d) }}</td>
+                </tr>
+                {% endfor %}
+                {% for pick in briefing.stock_picks.holds %}
+                <tr>
+                    <td class="name">{{ pick.ticker }}</td>
+                    <td class="mono">${{ "{:,.2f}".format(pick.price) }}</td>
+                    <td class="mono {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</td>
+                    <td><span style="font-size:11px;font-weight:700;text-transform:uppercase;background:rgba(245,158,11,0.15);color:var(--gold);padding:2px 10px;border-radius:4px;">HOLD</span></td>
+                    <td class="mono">{{ pick.rsi|int }}</td>
+                    <td style="color:{{ 'var(--green)' if pick.above_sma else 'var(--red)' }}">{{ 'Above' if pick.above_sma else 'Below' }}</td>
+                    <td class="mono">{{ pick.volume_ratio }}x</td>
+                    <td class="mono {{ 'up' if pick.momentum_5d >= 0 else 'down' }}">{{ "{:+.1f}%".format(pick.momentum_5d) }}</td>
+                </tr>
+                {% endfor %}
+                {% for pick in briefing.stock_picks.watches %}
+                <tr>
+                    <td class="name">{{ pick.ticker }}</td>
+                    <td class="mono">${{ "{:,.2f}".format(pick.price) }}</td>
+                    <td class="mono {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</td>
+                    <td><span style="font-size:11px;font-weight:700;text-transform:uppercase;background:rgba(239,68,68,0.15);color:var(--red);padding:2px 10px;border-radius:4px;">WATCH</span></td>
+                    <td class="mono">{{ pick.rsi|int }}</td>
+                    <td style="color:{{ 'var(--green)' if pick.above_sma else 'var(--red)' }}">{{ 'Above' if pick.above_sma else 'Below' }}</td>
+                    <td class="mono">{{ pick.volume_ratio }}x</td>
+                    <td class="mono {{ 'up' if pick.momentum_5d >= 0 else 'down' }}">{{ "{:+.1f}%".format(pick.momentum_5d) }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<div id="tab-insights" class="panel">
+    {% set other_insights = briefing.insights[1:] if briefing.insights else [] %}
+    {% if other_insights %}
+    <div class="section-title">Market Insights <span class="count">· {{ other_insights|length }}</span></div>
+    <div class="insights-grid">
+        {% for item in other_insights %}
+        <div class="insight-card">
+            <div class="insight-icon" style="background:linear-gradient(135deg,{% if loop.index == 1 %}{{ 'rgba(16,185,129,0.15),rgba(5,150,105,0.15)' }}{% elif loop.index == 2 %}{{ 'rgba(245,158,11,0.15),rgba(217,119,6,0.15)' }}{% elif loop.index == 3 %}{{ 'rgba(59,130,246,0.15),rgba(37,99,235,0.15)' }}{% else %}{{ 'rgba(139,92,246,0.15),rgba(124,58,237,0.15)' }}{% endif %});">
+                {% if loop.index == 1 %}🏭{% elif loop.index == 2 %}🛢️{% elif loop.index == 3 %}💱{% else %}🌐{% endif %}
+            </div>
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.body }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p style="color:var(--text3);font-size:14px;">No additional insights available.</p>
+    {% endif %}
+</div>
+
+<div id="tab-data" class="panel">
+    <div class="section-title">Price Data</div>
+    <div class="data-section">
+        <div class="data-table-wrap">
+            <table>
+                <tr><th>Name</th><th>Price</th><th>Change</th><th>Change</th><th>30d</th></tr>
+                {% for category, items in briefing.market_data.items() %}
+                {% if category != "Volatility" and items %}
+                <tr class="category-label"><td colspan="5">{{ category }}</td></tr>
+                {% for name, data in items.items() %}
+                <tr>
+                    <td class="name">{{ name }}</td>
+                    <td class="mono">{{ "{:,.2f}".format(data.price) if data and data.price else "—" }}</td>
+                    <td class="mono {{ 'up' if data and data.change_pct >= 0 else 'down' }}">{{ "{:+.2f}%".format(data.change_pct) if data and data.change_pct is defined else "—" }}</td>
+                    <td class="mono {{ 'up' if data and data.change >= 0 else 'down' }}">{{ "{:+.2f}".format(data.change) if data and data.change is defined else "—" }}</td>
+                    <td style="color:var(--text3)" class="mono">{{ "{:+.2f}%".format(data.ytd_change_pct) if data and data.ytd_change_pct else "—" }}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+                {% set vix = briefing.market_data.get("Volatility", {}).get("VIX", {}) %}
+                {% if vix and vix.price %}
+                <tr class="category-label"><td colspan="5">Volatility</td></tr>
+                <tr>
+                    <td class="name">VIX</td>
+                    <td class="mono">{{ vix.price }}</td>
+                    <td class="mono {{ 'up' if vix.change_pct >= 0 else 'down' }}">{{ "{:+.2f}%".format(vix.change_pct) if vix.change_pct is defined else "—" }}</td>
+                    <td class="mono {{ 'up' if vix.change >= 0 else 'down' }}">{{ vix.change if vix.change is defined else "—" }}</td>
+                    <td style="color:var(--text3)" class="mono">—</td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+function switchTab(tabId, btn) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+document.querySelectorAll('.glance-card').forEach((card, i) => {
+    setTimeout(() => {
+        card.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+    }, 80 + i * 50);
+});
+</script>
+
+{% else %}
+
+<div class="hero" style="padding-top:120px;">
+    <h1>No briefing yet</h1>
+    <p class="hero-sub">Run <code>python3 briefing.py</code> to generate today's market briefing.</p>
+</div>
+
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Market Briefing{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=SF+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif; background: #fff; color: #1d1d1f; -webkit-font-smoothing: antialiased; }
+::selection { background: #0071e3; color: #fff; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); height: 52px; display: flex; align-items: center; padding: 0 40px; }
+.nav-inner { max-width: 1000px; width: 100%; margin: 0 auto; display: flex; align-items: center; gap: 28px; }
+.nav-logo { font-size: 14px; font-weight: 600; letter-spacing: -0.2px; color: #1d1d1f; text-decoration: none; }
+.nav-links { display: flex; gap: 2px; }
+.nav-links a { padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 500; color: #86868b; text-decoration: none; transition: all 0.15s; }
+.nav-links a:hover { color: #1d1d1f; background: rgba(0,0,0,0.04); }
+.nav-links a.active { color: #1d1d1f; background: rgba(0,0,0,0.06); }
+.nav-spacer { flex: 1; }
+.nav-end { display: flex; align-items: center; gap: 16px; }
+.nav-btn { font-size: 12px; font-weight: 500; padding: 6px 16px; border-radius: 20px; text-decoration: none; transition: all 0.15s; }
+.nav-btn-primary { background: #0071e3; color: #fff; }
+.nav-btn-primary:hover { background: #0077ed; }
+
+.content { padding-top: 52px; }
+.page { max-width: 1000px; margin: 0 auto; padding: 56px 40px 80px; }
+.page-header { margin-bottom: 40px; }
+.page-header h1 { font-size: 40px; font-weight: 700; letter-spacing: -1px; color: #1d1d1f; line-height: 1.1; }
+.page-header .date { font-size: 13px; color: #86868b; margin-top: 6px; font-weight: 400; }
+
+.section { margin-bottom: 48px; }
+.section:last-child { margin-bottom: 0; }
+.section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+.section-header h2 { font-size: 13px; font-weight: 600; color: #86868b; text-transform: uppercase; letter-spacing: 0.5px; }
+.section-header .count { font-size: 12px; color: #c7c7cc; }
+
+/* AI Overview - clean text block */
+.overview-block { background: #f5f5f7; border-radius: 16px; padding: 32px 36px; }
+.overview-block p { font-size: 15px; line-height: 1.7; color: #1d1d1f; margin-bottom: 12px; font-weight: 400; }
+.overview-block p:last-child { margin-bottom: 0; }
+
+/* Glance - simple stat row */
+.glance { display: flex; gap: 24px; flex-wrap: wrap; }
+.glance-item { }
+.glance-label { font-size: 11px; color: #86868b; font-weight: 500; letter-spacing: 0.3px; margin-bottom: 2px; }
+.glance-value { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; color: #1d1d1f; line-height: 1.1; }
+.glance-change { font-size: 13px; margin-top: 1px; }
+.glance-change.up { color: #30a46c; }
+.glance-change.down { color: #e5484d; }
+
+/* Picks cards */
+.picks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.pick-item { background: #f5f5f7; border-radius: 14px; padding: 20px; }
+.pick-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.pick-ticker { font-size: 16px; font-weight: 600; letter-spacing: -0.2px; }
+.pick-badge { font-size: 10px; font-weight: 600; color: #30a46c; background: rgba(48,164,108,0.1); padding: 2px 8px; border-radius: 4px; }
+.pick-price { font-size: 22px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 2px; }
+.pick-change { font-size: 13px; }
+.pick-change.up { color: #30a46c; }
+.pick-change.down { color: #e5484d; }
+.pick-meta { font-size: 11px; color: #86868b; margin-top: 8px; line-height: 1.4; }
+
+/* News list */
+.news-list { }
+.news-item { border-bottom: 1px solid rgba(0,0,0,0.06); }
+.news-item:last-child { border: none; }
+.news-item a { display: block; padding: 16px 0; text-decoration: none; color: inherit; transition: all 0.15s; }
+.news-item a:hover { padding-left: 8px; }
+.news-source { font-size: 11px; font-weight: 500; color: #0071e3; letter-spacing: 0.3px; margin-bottom: 2px; }
+.news-title { font-size: 15px; font-weight: 500; line-height: 1.4; }
+.news-summary { font-size: 13px; color: #86868b; margin-top: 4px; line-height: 1.4; }
+
+/* Predictions callout */
+.insight-callout { font-size: 14px; line-height: 1.7; color: #1d1d1f; margin-top: 16px; background: #f5f5f7; border-radius: 12px; padding: 20px 24px; }
+
+/* Insights grid */
+.insights-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.insight-item { background: #f5f5f7; border-radius: 14px; padding: 24px; }
+.insight-item h3 { font-size: 11px; font-weight: 600; color: #86868b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.insight-item p { font-size: 14px; line-height: 1.65; color: #1d1d1f; font-weight: 400; }
+
+/* Tables */
+.table-wrap { border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; padding: 10px 16px; font-size: 10px; font-weight: 600; color: #86868b; text-transform: uppercase; letter-spacing: 0.5px; background: #fafafa; border-bottom: 1px solid rgba(0,0,0,0.06); }
+td { padding: 10px 16px; border-bottom: 1px solid rgba(0,0,0,0.04); }
+tr:last-child td { border: none; }
+tr.cat td { font-size: 10px; font-weight: 600; color: #0071e3; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 16px; background: #fafafa; }
+.mono { font-family: 'SF Mono', 'JetBrains Mono', monospace; font-weight: 500; }
+.up { color: #30a46c; }
+.down { color: #e5484d; }
+.name { font-weight: 500; }
+
+/* Signal badges */
+.signal { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; display: inline-block; }
+.signal-buy { background: rgba(48,164,108,0.1); color: #30a46c; }
+.signal-hold { background: rgba(245,158,11,0.1); color: #b65700; }
+.signal-watch { background: rgba(239,68,68,0.1); color: #e5484d; }
+
+/* Stat row */
+.stat-row { display: flex; gap: 8px; }
+.stat-box { flex: 1; border: 1px solid rgba(0,0,0,0.06); border-radius: 10px; padding: 16px 18px; }
+.stat-label { font-size: 10px; font-weight: 600; color: #86868b; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-value { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-top: 2px; }
+
+.no-data { text-align: center; padding: 80px 20px; }
+.no-data p { font-size: 14px; color: #86868b; }
+
+/* Subscribe form */
+.sub-card { max-width: 420px; }
+.sub-card h2 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+.sub-card .desc { font-size: 13px; color: #86868b; margin-bottom: 28px; line-height: 1.5; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 11px; font-weight: 500; color: #86868b; margin-bottom: 4px; }
+.form-group input, .form-group select { width: 100%; padding: 10px 12px; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; font-size: 13px; font-family: inherit; outline: none; transition: all 0.15s; color: #1d1d1f; background: #fff; }
+.form-group input:focus, .form-group select:focus { border-color: #0071e3; box-shadow: 0 0 0 3px rgba(0,113,227,0.1); }
+.form-group select { background: #fff; }
+.btn { width: 100%; padding: 12px; background: #0071e3; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+.btn:hover { background: #0077ed; }
+.flash { padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; }
+.flash.success { background: rgba(48,164,108,0.08); color: #30a46c; }
+.flash.error { background: rgba(239,68,68,0.08); color: #e5484d; }
+
+/* History links */
+.history-list { }
+.history-item { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: all 0.15s; }
+.history-item:hover { padding-left: 8px; }
+.history-item:last-child { border: none; }
+.history-date { font-size: 14px; font-weight: 500; }
+.history-arrow { margin-left: auto; color: #c7c7cc; font-size: 14px; }
+
+@media (max-width: 768px) {
+    .nav { padding: 0 16px; }
+    .nav-links { display: none; }
+    .page { padding: 40px 20px 60px; }
+    .page-header h1 { font-size: 30px; }
+    .glance { gap: 16px; }
+    .glance-value { font-size: 22px; }
+    .picks-grid { grid-template-columns: 1fr 1fr; }
+    .insights-grid { grid-template-columns: 1fr; }
+    .overview-block { padding: 24px; }
+    .stat-row { flex-wrap: wrap; }
+    .stat-box { min-width: calc(50% - 4px); }
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">Market Briefing</a>
+        <div class="nav-links">
+            <a href="/" class="{{ 'active' if active_page == 'overview' else '' }}">Overview</a>
+            <a href="/news" class="{{ 'active' if active_page == 'news' else '' }}">News</a>
+            <a href="/predictions" class="{{ 'active' if active_page == 'predictions' else '' }}">Predictions</a>
+            <a href="/picks" class="{{ 'active' if active_page == 'picks' else '' }}">Picks</a>
+            <a href="/insights" class="{{ 'active' if active_page == 'insights' else '' }}">Insights</a>
+            <a href="/search" class="{{ 'active' if active_page == 'search' else '' }}">Search</a>
+            <a href="/data" class="{{ 'active' if active_page == 'data' else '' }}">Data</a>
+            <a href="/history" class="{{ 'active' if active_page == 'history' else '' }}">History</a>
+        </div>
+        <div class="nav-spacer"></div>
+        <div class="nav-end">
+            <a href="/subscribe" class="nav-btn nav-btn-primary">Subscribe</a>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="page">
+        <div class="page-header">
+            <h1>{% block page_title %}{% endblock %}</h1>
+            {% if briefing %}
+            <div class="date">{{ briefing.date }}</div>
+            {% endif %}
+        </div>
+
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+</body>
+</html>

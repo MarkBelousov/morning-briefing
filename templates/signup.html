@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Subscribe — Market Briefing{% endblock %}
+{% block page_title %}Subscribe{% endblock %}
+{% block content %}
+
+<div class="sub-card">
+    <h2>Get the Morning Briefing</h2>
+    <p class="desc">A daily summary of US markets, forex, and commodities — delivered to your inbox each morning.</p>
+
+    {% if flash %}
+    <div class="flash {{ flash.category }}">{{ flash.message }}</div>
+    {% endif %}
+
+    <form method="POST" action="/subscribe">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1234567890">
+        </div>
+        <div class="form-group">
+            <label for="carrier">Carrier</label>
+            <select id="carrier" name="carrier">
+                <option value="">None</option>
+                <option value="verizon">Verizon</option>
+                <option value="att">AT&T</option>
+                <option value="tmobile">T-Mobile</option>
+                <option value="sprint">Sprint</option>
+                <option value="google_fi">Google Fi</option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Subscribe</button>
+    </form>
+</div>
+
+{% endblock %}

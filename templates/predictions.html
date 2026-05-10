@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Market Predictions — Market Briefing{% endblock %}
+{% block page_title %}Market Predictions{% endblock %}
+{% block content %}
+
+{% if briefing and sections %}
+
+{% set overview = sections.get("AI Market Overview") %}
+{% set stock_picks = sections.get("Stock Picks") %}
+{% set sector = sections.get("Sector Analysis") %}
+{% set macro = sections.get("Macro Context") %}
+
+{% if overview %}
+<div class="section">
+    <div class="section-header"><h2>Market Forecast</h2></div>
+    <div class="overview-block">
+        {% for p in overview.body.split('\n\n') %}
+        {% if p|trim %}<p>{{ p }}</p>{% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% if briefing.stock_picks and briefing.stock_picks.buys %}
+<div class="section">
+    <div class="section-header">
+        <h2>Top Predictions</h2>
+        <span class="count">{{ briefing.stock_picks.buys|length }} signals</span>
+    </div>
+    <div class="picks-grid">
+        {% for pick in briefing.stock_picks.buys[:6] %}
+        <div class="pick-item">
+            <div class="pick-header">
+                <span class="pick-ticker">{{ pick.ticker }}</span>
+                <span class="pick-badge">BUY</span>
+            </div>
+            <div class="pick-price">${{ "{:,.2f}".format(pick.price) }}</div>
+            <div class="pick-change {{ 'up' if pick.change_pct >= 0 else 'down' }}">{{ '▲' if pick.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(pick.change_pct) }}</div>
+            <div class="pick-meta">RSI {{ pick.rsi|int }} · {{ pick.reasons }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if stock_picks %}
+    <div class="insight-callout">{{ stock_picks.body }}</div>
+    {% endif %}
+</div>
+{% endif %}
+
+{% if sector %}
+<div class="section">
+    <div class="section-header"><h2>Sector Outlook</h2></div>
+    <div class="insight-callout">{{ sector.body }}</div>
+</div>
+{% endif %}
+
+{% if macro %}
+<div class="section">
+    <div class="section-header"><h2>Macro Context</h2></div>
+    <div class="insight-callout">{{ macro.body }}</div>
+</div>
+{% endif %}
+
+{% else %}
+<div class="no-data"><p>No predictions yet. Run <code>python3 briefing.py</code> to generate one.</p></div>
+{% endif %}
+
+{% endblock %}

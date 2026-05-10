@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Insights — Market Briefing{% endblock %}
+{% block page_title %}Market Insights{% endblock %}
+{% block content %}
+
+{% set other = [] %}
+{% if briefing and briefing.insights %}
+{% for s in briefing.insights %}
+{% if s.title != "AI Market Overview" %}{% set other = other + [s] %}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if other %}
+<div class="section">
+    <div class="insights-grid">
+        {% for item in other %}
+        <div class="insight-item">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.body }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="no-data"><p>No insights available.</p></div>
+{% endif %}
+
+{% endblock %}

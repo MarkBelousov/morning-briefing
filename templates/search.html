@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block title %}Stock Search — Market Briefing{% endblock %}
+{% block page_title %}Stock Search{% endblock %}
+{% block content %}
+
+<div class="section">
+    <form method="post" class="search-form">
+        <input type="text" name="ticker" placeholder="Enter ticker (e.g. AAPL, NVDA, TSLA)" value="{{ request.form.get('ticker', '') }}" autocomplete="off" autocapitalize="characters" class="search-input">
+        <button type="submit" class="search-btn">Search</button>
+    </form>
+</div>
+
+{% if error %}
+<div class="section">
+    <div class="overview-block" style="background:#fef2f2;">
+        <p style="color:#e5484d;">{{ error }}</p>
+    </div>
+</div>
+{% endif %}
+
+{% if result %}
+{% set d = result.data %}
+{% set targets = result.targets %}
+{% set signal = result.signal %}
+
+<div class="section">
+    <div class="stock-header">
+        <div>
+            <div class="stock-ticker">{{ d.ticker }}</div>
+            <div class="stock-name">{{ d.name }}</div>
+        </div>
+        <div class="stock-price-block">
+            <div class="stock-price">${{ "{:,.2f}".format(d.price) }}</div>
+            <div class="stock-change {{ 'up' if d.change_pct >= 0 else 'down' }}">{{ '▲' if d.change_pct >= 0 else '▼' }} {{ "{:+.2f}%".format(d.change_pct) }}</div>
+            <div class="stock-signal signal signal-{{ signal.lower() }}">{{ signal }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-header"><h2>Price Targets</h2></div>
+    <div class="targets-grid">
+        <div class="target-item">
+            <div class="target-label">End of Day</div>
+            <div class="target-price">${{ "{:,.2f}".format(targets.eod.price) }}</div>
+            <div class="target-change {{ 'up' if targets.eod.change_pct >= 0 else 'down' }}">{{ '{:+.2f}%'.format(targets.eod.change_pct) }}</div>
+        </div>
+        <div class="target-item">
+            <div class="target-label">1 Week</div>
+            <div class="target-price">${{ "{:,.2f}".format(targets.week.price) }}</div>
+            <div class="target-change {{ 'up' if targets.week.change_pct >= 0 else 'down' }}">{{ '{:+.2f}%'.format(targets.week.change_pct) }}</div>
+        </div>
+        <div class="target-item">
+            <div class="target-label">1 Month</div>
+            <div class="target-price">${{ "{:,.2f}".format(targets.month.price) }}</div>
+            <div class="target-change {{ 'up' if targets.month.change_pct >= 0 else 'down' }}">{{ '{:+.2f}%'.format(targets.month.change_pct) }}</div>
+        </div>
+        <div class="target-item">
+            <div class="target-label">1 Year</div>
+            <div class="target-price">${{ "{:,.2f}".format(targets.year.price) }}</div>
+            <div class="target-change {{ 'up' if targets.year.change_pct >= 0 else 'down' }}">{{ '{:+.2f}%'.format(targets.year.change_pct) }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-header"><h2>Technical Indicators</h2></div>
+    <div class="table-wrap">
+        <table>
+            <tr><th>Indicator</th><th>Value</th><th>Signal</th></tr>
+            <tr><td>RSI (14)</td><td class="mono">{{ d.rsi_14|int }}</td><td>{{ 'Oversold' if d.rsi_14 < 35 else 'Overbought' if d.rsi_14 > 70 else 'Neutral' }}</td></tr>
+            <tr><td>20-Day MA</td><td class="mono">${{ "{:,.2f}".format(d.sma_20) }}</td><td>{{ 'Above' if d.above_sma else 'Below' }}</td></tr>
+            <tr><td>Volume Ratio</td><td class="mono">{{ d.volume_ratio }}x</td><td>{{ 'Elevated' if d.volume_ratio > 1.5 else 'Normal' }}</td></tr>
+            <tr><td>5-Day Momentum</td><td class="mono {{ 'up' if d.momentum_5d >= 0 else 'down' }}">{{ '{:+.1f}%'.format(d.momentum_5d) }}</td><td>{{ 'Strong' if d.momentum_5d > 5 else 'Weak' if d.momentum_5d < -5 else 'Flat' }}</td></tr>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-header"><h2>Prediction & Insight</h2></div>
+    <div class="overview-block">
+        {% for p in result.insight.split('\n\n') %}
+        {% if p|trim %}<p>{{ p }}</p>{% endif %}
+        {% endfor %}
+        <p style="margin-top:12px;font-size:12px;color:#86868b;"><strong>Score:</strong> {{ result.score }}/5 · <strong>Reasoning:</strong> {{ result.reasons }}</p>
+    </div>
+</div>
+{% endif %}
+
+<style>
+.search-form { display: flex; gap: 8px; max-width: 480px; }
+.search-input { flex: 1; padding: 10px 16px; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; font-size: 15px; font-family: 'SF Mono', 'Fira Code', monospace; outline: none; transition: border-color 0.15s; }
+.search-input:focus { border-color: #0071e3; }
+.search-btn { padding: 10px 24px; background: #0071e3; color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 500; cursor: pointer; }
+.search-btn:hover { background: #0077ed; }
+
+.stock-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.stock-ticker { font-size: 32px; font-weight: 700; letter-spacing: -1px; }
+.stock-name { font-size: 14px; color: #86868b; margin-top: 2px; }
+.stock-price-block { text-align: right; }
+.stock-price { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; }
+.stock-change { font-size: 16px; margin-top: 2px; }
+.stock-change.up { color: #30a46c; }
+.stock-change.down { color: #e5484d; }
+.stock-signal { margin-top: 6px; display: inline-block; }
+
+.targets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.target-item { background: #f5f5f7; border-radius: 14px; padding: 20px; text-align: center; }
+.target-label { font-size: 11px; color: #86868b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 6px; }
+.target-price { font-size: 22px; font-weight: 600; letter-spacing: -0.5px; }
+.target-change { font-size: 13px; margin-top: 2px; }
+.target-change.up { color: #30a46c; }
+.target-change.down { color: #e5484d; }
+
+@media (max-width: 600px) {
+    .targets-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+{% endblock %}
