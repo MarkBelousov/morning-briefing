@@ -1,0 +1,574 @@
+{
+  "date": "Monday, October 19, 2026",
+  "timestamp": "2026-10-19T13:36:40.153326-04:00",
+  "market_data": {
+    "US Indices": {
+      "S&P 500": {
+        "price": 7697.39,
+        "change": 37.95,
+        "change_pct": 0.5,
+        "high": 7731.18,
+        "low": 7684.79,
+        "volume": 1226709000,
+        "ytd_change_pct": -0.87,
+        "sma_20": 7735.88,
+        "rsi_14": 52.5,
+        "volume_ratio": 0.24,
+        "name": "S&P 500"
+      },
+      "Nasdaq": {
+        "price": 26452.47,
+        "change": 312.44,
+        "change_pct": 1.2,
+        "high": 26613.15,
+        "low": 26344.67,
+        "volume": 3930747000,
+        "ytd_change_pct": -2.91,
+        "sma_20": 27017.69,
+        "rsi_14": 44.2,
+        "volume_ratio": 0.5,
+        "name": "Nasdaq"
+      },
+      "Dow Jones": {
+        "price": 51985.26,
+        "change": -17.15,
+        "change_pct": -0.03,
+        "high": 52134.58,
+        "low": 51863.8,
+        "volume": 204329347,
+        "ytd_change_pct": 0.23,
+        "sma_20": 51527.9,
+        "rsi_14": 60.4,
+        "volume_ratio": 0.49,
+        "name": "Dow Jones"
+      },
+      "Russell 2000": {
+        "price": 2730.5,
+        "change": 9.13,
+        "change_pct": 0.34,
+        "high": 2742.4,
+        "low": 2725.19,
+        "volume": 0,
+        "ytd_change_pct": -5.52,
+        "sma_20": 2803.11,
+        "rsi_14": 37.1,
+        "volume_ratio": 0.0,
+        "name": "Russell 2000"
+      }
+    },
+    "Forex": {
+      "EUR/USD": {
+        "price": 1.12,
+        "change": 0.0,
+        "change_pct": 0.01,
+        "high": 1.12,
+        "low": 1.12,
+        "volume": 0,
+        "ytd_change_pct": -2.18,
+        "sma_20": 1.13,
+        "rsi_14": 29.8,
+        "volume_ratio": 1.0,
+        "name": "EUR/USD"
+      },
+      "GBP/USD": {
+        "price": 1.33,
+        "change": 0.0,
+        "change_pct": 0.23,
+        "high": 1.33,
+        "low": 1.33,
+        "volume": 0,
+        "ytd_change_pct": -0.5,
+        "sma_20": 1.33,
+        "rsi_14": 55.0,
+        "volume_ratio": 1.0,
+        "name": "GBP/USD"
+      },
+      "USD/JPY": {
+        "price": 158.51,
+        "change": 0.37,
+        "change_pct": 0.24,
+        "high": 158.55,
+        "low": 157.69,
+        "volume": 0,
+        "ytd_change_pct": 0.73,
+        "sma_20": 157.97,
+        "rsi_14": 68.4,
+        "volume_ratio": 1.0,
+        "name": "USD/JPY"
+      },
+      "USD/CHF": {
+        "price": 0.83,
+        "change": -0.0,
+        "change_pct": -0.19,
+        "high": 0.83,
+        "low": 0.82,
+        "volume": 0,
+        "ytd_change_pct": 0.65,
+        "sma_20": 0.83,
+        "rsi_14": 41.1,
+        "volume_ratio": 1.0,
+        "name": "USD/CHF"
+      },
+      "USD/CAD": {
+        "price": 1.41,
+        "change": -0.01,
+        "change_pct": -0.69,
+        "high": 1.41,
+        "low": 1.41,
+        "volume": 0,
+        "ytd_change_pct": 0.45,
+        "sma_20": 1.42,
+        "rsi_14": 41.7,
+        "volume_ratio": 1.0,
+        "name": "USD/CAD"
+      },
+      "AUD/USD": {
+        "price": 0.7,
+        "change": 0.01,
+        "change_pct": 0.89,
+        "high": 0.7,
+        "low": 0.69,
+        "volume": 0,
+        "ytd_change_pct": -1.95,
+        "sma_20": 0.7,
+        "rsi_14": 45.1,
+        "volume_ratio": 1.0,
+        "name": "AUD/USD"
+      }
+    },
+    "Commodities": {
+      "Gold": {
+        "price": 4158.6,
+        "change": -22.5,
+        "change_pct": -0.54,
+        "high": 4211.2,
+        "low": 4155.6,
+        "volume": 106714,
+        "ytd_change_pct": -4.98,
+        "sma_20": 4202.84,
+        "rsi_14": 47.5,
+        "volume_ratio": 0.71,
+        "name": "Gold"
+      },
+      "Silver": {
+        "price": 57.29,
+        "change": 0.3,
+        "change_pct": 0.53,
+        "high": 58.01,
+        "low": 56.9,
+        "volume": 22260,
+        "ytd_change_pct": -13.1,
+        "sma_20": 60.42,
+        "rsi_14": 37.7,
+        "volume_ratio": 17.17,
+        "name": "Silver"
+      },
+      "Crude Oil": {
+        "price": 99.23,
+        "change": -2.18,
+        "change_pct": -2.15,
+        "high": 99.45,
+        "low": 96.72,
+        "volume": 208464,
+        "ytd_change_pct": 4.91,
+        "sma_20": 93.11,
+        "rsi_14": 71.0,
+        "volume_ratio": 0.69,
+        "name": "Crude Oil"
+      },
+      "Natural Gas": {
+        "price": 3.06,
+        "change": -0.05,
+        "change_pct": -1.73,
+        "high": 3.21,
+        "low": 3.03,
+        "volume": 130247,
+        "ytd_change_pct": 3.27,
+        "sma_20": 3.12,
+        "rsi_14": 53.0,
+        "volume_ratio": 0.7,
+        "name": "Natural Gas"
+      }
+    },
+    "Sectors": {
+      "Tech (XLK)": {
+        "price": 186.35,
+        "change": 2.88,
+        "change_pct": 1.57,
+        "high": 188.02,
+        "low": 185.61,
+        "volume": 5259575,
+        "ytd_change_pct": -5.05,
+        "sma_20": 195.4,
+        "rsi_14": 36.8,
+        "volume_ratio": 0.65,
+        "name": "Tech (XLK)"
+      },
+      "Financials (XLF)": {
+        "price": 55.15,
+        "change": -0.37,
+        "change_pct": -0.67,
+        "high": 55.5,
+        "low": 55.09,
+        "volume": 15996108,
+        "ytd_change_pct": 0.64,
+        "sma_20": 54.41,
+        "rsi_14": 62.2,
+        "volume_ratio": 0.41,
+        "name": "Financials (XLF)"
+      },
+      "Energy (XLE)": {
+        "price": 67.88,
+        "change": -0.36,
+        "change_pct": -0.53,
+        "high": 68.5,
+        "low": 67.63,
+        "volume": 16996611,
+        "ytd_change_pct": 9.87,
+        "sma_20": 64.19,
+        "rsi_14": 80.5,
+        "volume_ratio": 0.54,
+        "name": "Energy (XLE)"
+      },
+      "Healthcare (XLV)": {
+        "price": 175.65,
+        "change": -1.06,
+        "change_pct": -0.6,
+        "high": 177.35,
+        "low": 175.27,
+        "volume": 4257769,
+        "ytd_change_pct": 3.39,
+        "sma_20": 170.47,
+        "rsi_14": 60.4,
+        "volume_ratio": 0.51,
+        "name": "Healthcare (XLV)"
+      },
+      "Industrials (XLI)": {
+        "price": 166.99,
+        "change": -0.76,
+        "change_pct": -0.46,
+        "high": 168.47,
+        "low": 166.53,
+        "volume": 3565754,
+        "ytd_change_pct": -1.92,
+        "sma_20": 168.89,
+        "rsi_14": 43.3,
+        "volume_ratio": 0.49,
+        "name": "Industrials (XLI)"
+      },
+      "Consumer Disc (XLY)": {
+        "price": 114.25,
+        "change": 1.79,
+        "change_pct": 1.59,
+        "high": 114.47,
+        "low": 112.68,
+        "volume": 3480321,
+        "ytd_change_pct": 1.7,
+        "sma_20": 111.2,
+        "rsi_14": 72.6,
+        "volume_ratio": 0.5,
+        "name": "Consumer Disc (XLY)"
+      }
+    },
+    "Volatility": {
+      "VIX": {
+        "price": 18.47,
+        "change": -1.52,
+        "change_pct": -7.6,
+        "high": 18.93,
+        "low": 17.39,
+        "volume": 0,
+        "ytd_change_pct": 29.98,
+        "sma_20": 15.91,
+        "rsi_14": 61.5,
+        "volume_ratio": 1.0
+      }
+    }
+  },
+  "stock_picks": {
+    "buys": [
+      {
+        "ticker": "UNH",
+        "price": 402.08,
+        "change_pct": 0.16,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 68.0,
+        "above_sma": "True",
+        "volume_ratio": 0.4,
+        "momentum_5d": 6.44,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+6.4%)"
+      },
+      {
+        "ticker": "SBUX",
+        "price": 97.99,
+        "change_pct": 0.48,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 57.2,
+        "above_sma": "True",
+        "volume_ratio": 0.32,
+        "momentum_5d": 6.51,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+6.5%)"
+      }
+    ],
+    "holds": [
+      {
+        "ticker": "MSFT",
+        "price": 533.58,
+        "change_pct": 0.86,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 65.5,
+        "above_sma": "True",
+        "volume_ratio": 0.43,
+        "momentum_5d": -1.82,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "AMZN",
+        "price": 262.53,
+        "change_pct": 5.01,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 64.2,
+        "above_sma": "True",
+        "volume_ratio": 0.92,
+        "momentum_5d": 1.53,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "QCOM",
+        "price": 173.07,
+        "change_pct": 0.56,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 34.4,
+        "above_sma": "False",
+        "volume_ratio": 0.41,
+        "momentum_5d": -2.14,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "ASML",
+        "price": 1663.92,
+        "change_pct": 1.36,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 26.9,
+        "above_sma": "False",
+        "volume_ratio": 0.52,
+        "momentum_5d": -3.13,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "BLK",
+        "price": 1128.13,
+        "change_pct": -0.55,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 68.2,
+        "above_sma": "True",
+        "volume_ratio": 0.41,
+        "momentum_5d": 5.82,
+        "reasons": "above 20d MA, strong 5d momentum (+5.8%)"
+      }
+    ],
+    "watches": [
+      {
+        "ticker": "META",
+        "price": 700.81,
+        "change_pct": -1.2,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 38.1,
+        "above_sma": "False",
+        "volume_ratio": 0.46,
+        "momentum_5d": -8.09,
+        "reasons": "low RSI, weak 5d momentum (-8.1%), below 20d MA"
+      },
+      {
+        "ticker": "HON",
+        "price": 209.76,
+        "change_pct": -0.78,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 49.2,
+        "above_sma": "False",
+        "volume_ratio": 0.36,
+        "momentum_5d": 1.19,
+        "reasons": "below 20d MA"
+      },
+      {
+        "ticker": "AAPL",
+        "price": 342.27,
+        "change_pct": -0.35,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 70.3,
+        "above_sma": "True",
+        "volume_ratio": 0.5,
+        "momentum_5d": 0.29,
+        "reasons": "above 20d MA, overbought RSI"
+      },
+      {
+        "ticker": "GOOGL",
+        "price": 344.37,
+        "change_pct": 1.11,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 53.5,
+        "above_sma": "False",
+        "volume_ratio": 0.42,
+        "momentum_5d": -2.66,
+        "reasons": "neutral signals"
+      },
+      {
+        "ticker": "AVGO",
+        "price": 335.52,
+        "change_pct": 2.06,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 40.8,
+        "above_sma": "False",
+        "volume_ratio": 0.38,
+        "momentum_5d": -6.1,
+        "reasons": "low RSI, weak 5d momentum (-6.1%)"
+      }
+    ]
+  },
+  "headlines": [
+    {
+      "title": "Nasdaq gains as investors buy the dip in the AI trade: Live updates",
+      "link": "https://www.cnbc.com/2026/10/18/stock-market-today-live-updates.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 17:27:26 GMT",
+      "summary": "The S&amp;P 500 lost nearly 2% last week, its biggest weekly decline since late June. The Nasdaq fell 4.5%, snapping a four-week winning streak."
+    },
+    {
+      "title": "OpenAI bugging suspect's conduct could pose danger to U.S. national security, feds warn",
+      "link": "https://www.cnbc.com/2026/10/19/openai-bugging-suspect-alfozan-saudi-royal-family.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 15:10:54 GMT",
+      "summary": "Saudi national Abdulrahman Alfozan is accused of planting a recording device in an executive conference room at OpenAI headquarters in San Francisco."
+    },
+    {
+      "title": "Saudi Arabia postpones big investor conference to 2027 as Iran-backed Houthis escalate attacks on kingdom",
+      "link": "https://www.cnbc.com/2026/10/19/saudi-arabia-postpones-fii-investor-conference-to-2027.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 17:01:26 GMT",
+      "summary": "Iran-backed Houthi militants have launched repeated volleys of missiles and drones at Saudi Arabia since a deadly airport attack earlier this month."
+    },
+    {
+      "title": "Apple announces product launch event for Oct. 28. Analysts expect touchscreen laptop",
+      "link": "https://www.cnbc.com/2026/10/19/apple-product-launch-event-oct-28-analysts-expect-touchscreen-laptop.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 17:25:57 GMT",
+      "summary": "Apple sent invitations for an event next week, calling it \"Pro and tell.\""
+    },
+    {
+      "title": "Stocks making the biggest moves midday: Sandisk, Marvell, Datadog, Cleveland-Cliffs, Amazon & more",
+      "link": "https://www.cnbc.com/2026/10/19/stocks-making-the-biggest-moves-midday-sndk-mrvl-ddog-clf-amzn.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 16:56:45 GMT",
+      "summary": "Here are some of the companies making headlines in midday trading."
+    },
+    {
+      "title": "Goldman says play defense with these stocks if you're worried about the AI bull failing",
+      "link": "https://www.cnbc.com/2026/10/19/goldman-says-play-defense-with-these-stocks-if-youre-worried-about-the-ai-bull-failing.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 17:28:11 GMT",
+      "summary": "These defensive stocks, some of which have lagged, could be ready rally as investors bail on AI trade."
+    },
+    {
+      "title": "Anthropic is AI trade's last big hope for a major IPO this year",
+      "link": "https://www.cnbc.com/2026/10/19/anthropic-ipo-ai-trade.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 16:42:14 GMT",
+      "summary": "On Kalshi, Anthropic is seen as the last major IPO in 2026 after OpenAI delayed its public market debut. Others have postponed too."
+    },
+    {
+      "title": "Google says it can build data centers the right way. Some experts and residents are skeptical",
+      "link": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 13:36:41 GMT",
+      "summary": "Google says its Minnesota AI data center will add clean energy to the grid and protect ratepayers. Experts question whether grid upgrades are needed."
+    },
+    {
+      "title": "Elon Musk says he'll give a SpaceX share to every child in America next year",
+      "link": "https://www.cnbc.com/2026/10/19/elon-musk-spacex-shares-giveaway-kids.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 16:58:20 GMT",
+      "summary": "The SpaceX boss said Monday that he'll give one of his company shares to every child in the U.S. next year. He didn't say how the share giveaway would happen."
+    },
+    {
+      "title": "NYSE becomes latest exchange to extend options hours as appetite for around-the-clock trading grows",
+      "link": "https://www.cnbc.com/2026/10/19/nyse-extends-options-trading-hours.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 13:46:50 GMT",
+      "summary": "The New York Stock Exchange becomes second major exchange to announce extended-hours options trading for heavily traded ETFs and single stocks, following CBOE."
+    },
+    {
+      "title": "French unrest compounds debt crisis fears. Paris-listed stocks, bonds and the euro fall",
+      "link": "https://www.cnbc.com/2026/10/19/france-protests-bond-yields-markets.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 12:59:13 GMT",
+      "summary": "\"It looks like either the bond markets riot, or the people riot, or both,\" one analyst told CNBC."
+    },
+    {
+      "title": "In pictures: More than 500,000 took to the streets as France protests erupted into violence",
+      "link": "https://www.cnbc.com/2026/10/19/france-protests-paris-violence-pictures.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 08:10:26 GMT",
+      "summary": "Over 500,000 people took part in protests in France over the weekend, which became marred by violence, amid demonstrations against rising living costs."
+    },
+    {
+      "title": "Women may be at greater risk of AI job losses. Telephone switch operators and PCs show why",
+      "link": "https://www.cnbc.com/2026/10/19/ai-job-losses-women-automation-risk.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 14:20:08 GMT",
+      "summary": "The history of technological progress suggests that as AI spreads, the employment impact will hit women more than men."
+    },
+    {
+      "title": "Supreme Court won't review Trump's firing of labor board member",
+      "link": "https://www.cnbc.com/2026/10/19/supreme-court-trump-firing-labor-board.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 14:59:29 GMT",
+      "summary": "The court's action follows its June decision backing Trump's firing of Rebecca Slaughter, a Democratic Federal Trade Commission member."
+    },
+    {
+      "title": "Healthcare is catching the rotation out of AI. Josh Brown's list includes two names that can benefit",
+      "link": "https://www.cnbc.com/2026/10/19/josh-browns-list-includes-two-names-that-can-benefit-from-rotation-out-of-ai.html",
+      "source": "CNBC",
+      "published": "Mon, 19 Oct 2026 15:23:58 GMT",
+      "summary": "Josh Brown and Sean Russo dive into two names that can get a boost from a move out of AI-linked names."
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI Market Overview",
+      "body": "Markets were mixed this morning with clear divergence. Nasdaq (+1.2%) and S&P 500 (+0.5%) led the upside. Dow Jones (-0.0%) lagged.\n\nS&P 500 at 7,697 (+0.50%). Nasdaq at 26,452 (+1.20% (tech-led)). Dow at 51,985 (-0.03%). Russell 2000 at 2,730 (+0.34%, in line large caps).\n\nVIX at 18.5 \u2014 modest anxiety, investors eyeing downside risks, falling 8% from prior session.\n\nTop stock picks this morning: UNH ($402.1, +0.2%), SBUX ($98.0, +0.5%). These names show the strongest combination of technical momentum and value signals."
+    },
+    {
+      "title": "Stock Picks",
+      "body": "Based on technical analysis of 2 qualifying names, the strongest BUY signals are:  UNH at $402.08 (\u25b2+0.16%) \u2014 RSI 68, above 20d MA with momentum, strong 5d momentum (+6.4%). SBUX at $97.99 (\u25b2+0.48%) \u2014 RSI 57, above 20d MA with momentum, strong 5d momentum (+6.5%). These recommendations combine RSI momentum, moving average positioning, and volume confirmation. Always perform your own due diligence before trading. On the watch list (potential reversals): META (RSI 38), HON (RSI 49), AAPL (RSI 70)."
+    },
+    {
+      "title": "Sector Analysis",
+      "body": "Leading: Consumer Disc (XLY) (+1.6%). Lagging: Financials (XLF) (-0.7%). 2.3% spread suggests moderate sector rotation. Only 2/6 sectors green \u2014 selective market."
+    },
+    {
+      "title": "Commodities Brief",
+      "body": "Gold slipping -0.5% to $4,159. Crude dropping -2.1% to $99.23."
+    },
+    {
+      "title": "FX Overview",
+      "body": "Dollar mixed vs majors. AUDUSD strengthening (+0.9%). USDCAD weakening (-0.7%)."
+    },
+    {
+      "title": "Macro Context",
+      "body": "S&P 500 sits marginally below its 30-day level (-0.9%)."
+    }
+  ],
+  "summary": "S&P 500: 7697.39  \u25b2 +0.50%\nNasdaq: 26452.47  \u25b2 +1.20%\nDow Jones: 51985.26  \u25bc -0.03%\nRussell 2000: 2730.5  \u25b2 +0.34%\nGold: 4158.6  \u25bc -0.54%\nSilver: 57.29  \u25b2 +0.53%\nCrude Oil: 99.23  \u25bc -2.15%\nNatural Gas: 3.06  \u25bc -1.73%\nEUR/USD: 1.12  \u25b2 +0.01%\nGBP/USD: 1.33  \u25b2 +0.23%\nUSD/JPY: 158.51  \u25b2 +0.24%\nUSD/CHF: 0.83  \u25bc -0.19%"
+}
