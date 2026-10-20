@@ -1,0 +1,574 @@
+{
+  "date": "Tuesday, October 20, 2026",
+  "timestamp": "2026-10-20T11:42:28.931271-04:00",
+  "market_data": {
+    "US Indices": {
+      "S&P 500": {
+        "price": 7721.33,
+        "change": 30.6,
+        "change_pct": 0.4,
+        "high": 7748.42,
+        "low": 7668.03,
+        "volume": 925781183,
+        "ytd_change_pct": 0.2,
+        "sma_20": 7733.38,
+        "rsi_14": 56.6,
+        "volume_ratio": 0.19,
+        "name": "S&P 500"
+      },
+      "Nasdaq": {
+        "price": 26483.8,
+        "change": 52.91,
+        "change_pct": 0.2,
+        "high": 26601.71,
+        "low": 26179.74,
+        "volume": 3397006000,
+        "ytd_change_pct": -1.68,
+        "sma_20": 26978.59,
+        "rsi_14": 43.6,
+        "volume_ratio": 0.44,
+        "name": "Nasdaq"
+      },
+      "Dow Jones": {
+        "price": 52483.31,
+        "change": 517.28,
+        "change_pct": 1.0,
+        "high": 52689.81,
+        "low": 51910.92,
+        "volume": 139001280,
+        "ytd_change_pct": 1.89,
+        "sma_20": 51557.92,
+        "rsi_14": 75.1,
+        "volume_ratio": 0.34,
+        "name": "Dow Jones"
+      },
+      "Russell 2000": {
+        "price": 2777.3,
+        "change": 49.0,
+        "change_pct": 1.8,
+        "high": 2783.54,
+        "low": 2728.56,
+        "volume": 0,
+        "ytd_change_pct": -2.16,
+        "sma_20": 2797.37,
+        "rsi_14": 47.1,
+        "volume_ratio": 0.0,
+        "name": "Russell 2000"
+      }
+    },
+    "Forex": {
+      "EUR/USD": {
+        "price": 1.12,
+        "change": 0.0,
+        "change_pct": 0.08,
+        "high": 1.13,
+        "low": 1.12,
+        "volume": 0,
+        "ytd_change_pct": -1.86,
+        "sma_20": 1.13,
+        "rsi_14": 36.0,
+        "volume_ratio": 1.0,
+        "name": "EUR/USD"
+      },
+      "GBP/USD": {
+        "price": 1.34,
+        "change": 0.0,
+        "change_pct": 0.28,
+        "high": 1.34,
+        "low": 1.33,
+        "volume": 0,
+        "ytd_change_pct": 0.22,
+        "sma_20": 1.33,
+        "rsi_14": 63.0,
+        "volume_ratio": 1.0,
+        "name": "GBP/USD"
+      },
+      "USD/JPY": {
+        "price": 158.18,
+        "change": 0.38,
+        "change_pct": 0.24,
+        "high": 158.6,
+        "low": 157.82,
+        "volume": 0,
+        "ytd_change_pct": 0.46,
+        "sma_20": 157.98,
+        "rsi_14": 61.3,
+        "volume_ratio": 1.0,
+        "name": "USD/JPY"
+      },
+      "USD/CHF": {
+        "price": 0.83,
+        "change": 0.0,
+        "change_pct": 0.17,
+        "high": 0.83,
+        "low": 0.82,
+        "volume": 0,
+        "ytd_change_pct": 0.53,
+        "sma_20": 0.83,
+        "rsi_14": 36.2,
+        "volume_ratio": 1.0,
+        "name": "USD/CHF"
+      },
+      "USD/CAD": {
+        "price": 1.4,
+        "change": -0.01,
+        "change_pct": -0.5,
+        "high": 1.41,
+        "low": 1.4,
+        "volume": 0,
+        "ytd_change_pct": -0.13,
+        "sma_20": 1.42,
+        "rsi_14": 36.3,
+        "volume_ratio": 1.0,
+        "name": "USD/CAD"
+      },
+      "AUD/USD": {
+        "price": 0.7,
+        "change": 0.0,
+        "change_pct": 0.44,
+        "high": 0.7,
+        "low": 0.7,
+        "volume": 0,
+        "ytd_change_pct": -1.54,
+        "sma_20": 0.7,
+        "rsi_14": 51.9,
+        "volume_ratio": 1.0,
+        "name": "AUD/USD"
+      }
+    },
+    "Commodities": {
+      "Gold": {
+        "price": 4152.1,
+        "change": -8.0,
+        "change_pct": -0.19,
+        "high": 4174.9,
+        "low": 4130.1,
+        "volume": 128311,
+        "ytd_change_pct": -3.85,
+        "sma_20": 4191.71,
+        "rsi_14": 45.9,
+        "volume_ratio": 0.87,
+        "name": "Gold"
+      },
+      "Silver": {
+        "price": 57.92,
+        "change": 0.94,
+        "change_pct": 1.65,
+        "high": 58.76,
+        "low": 56.51,
+        "volume": 34771,
+        "ytd_change_pct": -10.04,
+        "sma_20": 60.0,
+        "rsi_14": 42.1,
+        "volume_ratio": 18.09,
+        "name": "Silver"
+      },
+      "Crude Oil": {
+        "price": 97.53,
+        "change": -6.13,
+        "change_pct": -5.91,
+        "high": 101.37,
+        "low": 95.25,
+        "volume": 273068,
+        "ytd_change_pct": 5.83,
+        "sma_20": 93.48,
+        "rsi_14": 62.4,
+        "volume_ratio": 0.97,
+        "name": "Crude Oil"
+      },
+      "Natural Gas": {
+        "price": 2.98,
+        "change": -0.08,
+        "change_pct": -2.52,
+        "high": 3.05,
+        "low": 2.97,
+        "volume": 92456,
+        "ytd_change_pct": -1.39,
+        "sma_20": 3.12,
+        "rsi_14": 47.6,
+        "volume_ratio": 0.49,
+        "name": "Natural Gas"
+      }
+    },
+    "Sectors": {
+      "Tech (XLK)": {
+        "price": 185.81,
+        "change": -0.15,
+        "change_pct": -0.08,
+        "high": 187.05,
+        "low": 182.81,
+        "volume": 5234649,
+        "ytd_change_pct": -4.88,
+        "sma_20": 194.85,
+        "rsi_14": 33.1,
+        "volume_ratio": 0.65,
+        "name": "Tech (XLK)"
+      },
+      "Financials (XLF)": {
+        "price": 55.77,
+        "change": 0.71,
+        "change_pct": 1.29,
+        "high": 55.92,
+        "low": 55.17,
+        "volume": 8927843,
+        "ytd_change_pct": 2.26,
+        "sma_20": 54.45,
+        "rsi_14": 74.3,
+        "volume_ratio": 0.25,
+        "name": "Financials (XLF)"
+      },
+      "Energy (XLE)": {
+        "price": 67.29,
+        "change": -0.51,
+        "change_pct": -0.76,
+        "high": 68.47,
+        "low": 66.83,
+        "volume": 26408478,
+        "ytd_change_pct": 7.88,
+        "sma_20": 64.46,
+        "rsi_14": 76.5,
+        "volume_ratio": 0.83,
+        "name": "Energy (XLE)"
+      },
+      "Healthcare (XLV)": {
+        "price": 179.69,
+        "change": 4.04,
+        "change_pct": 2.3,
+        "high": 179.84,
+        "low": 177.4,
+        "volume": 4714033,
+        "ytd_change_pct": 6.45,
+        "sma_20": 170.96,
+        "rsi_14": 72.2,
+        "volume_ratio": 0.57,
+        "name": "Healthcare (XLV)"
+      },
+      "Industrials (XLI)": {
+        "price": 166.59,
+        "change": -0.09,
+        "change_pct": -0.05,
+        "high": 168.16,
+        "low": 164.96,
+        "volume": 5794325,
+        "ytd_change_pct": -2.06,
+        "sma_20": 168.69,
+        "rsi_14": 48.6,
+        "volume_ratio": 0.8,
+        "name": "Industrials (XLI)"
+      },
+      "Consumer Disc (XLY)": {
+        "price": 115.66,
+        "change": 1.2,
+        "change_pct": 1.05,
+        "high": 116.21,
+        "low": 114.56,
+        "volume": 3702892,
+        "ytd_change_pct": 4.53,
+        "sma_20": 111.38,
+        "rsi_14": 77.5,
+        "volume_ratio": 0.54,
+        "name": "Consumer Disc (XLY)"
+      }
+    },
+    "Volatility": {
+      "VIX": {
+        "price": 17.85,
+        "change": -0.59,
+        "change_pct": -3.2,
+        "high": 19.13,
+        "low": 17.55,
+        "volume": 0,
+        "ytd_change_pct": 17.59,
+        "sma_20": 16.09,
+        "rsi_14": 56.9,
+        "volume_ratio": 1.0
+      }
+    }
+  },
+  "stock_picks": {
+    "buys": [
+      {
+        "ticker": "NKE",
+        "price": 37.85,
+        "change_pct": 1.72,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 69.8,
+        "above_sma": "True",
+        "volume_ratio": 0.19,
+        "momentum_5d": 7.22,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+7.2%)"
+      },
+      {
+        "ticker": "SBUX",
+        "price": 99.83,
+        "change_pct": 2.0,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 66.2,
+        "above_sma": "True",
+        "volume_ratio": 0.27,
+        "momentum_5d": 7.06,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+7.1%)"
+      }
+    ],
+    "holds": [
+      {
+        "ticker": "AMZN",
+        "price": 263.5,
+        "change_pct": 0.4,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 63.2,
+        "above_sma": "True",
+        "volume_ratio": 0.45,
+        "momentum_5d": 3.71,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "JPM",
+        "price": 336.93,
+        "change_pct": 1.02,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 62.5,
+        "above_sma": "True",
+        "volume_ratio": 0.29,
+        "momentum_5d": 0.49,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "BAC",
+        "price": 51.08,
+        "change_pct": 1.37,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 29.5,
+        "above_sma": "False",
+        "volume_ratio": 0.4,
+        "momentum_5d": -0.6,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "BLK",
+        "price": 1144.19,
+        "change_pct": 1.74,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 74.0,
+        "above_sma": "True",
+        "volume_ratio": 0.61,
+        "momentum_5d": 6.56,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+6.6%), overbought RSI"
+      },
+      {
+        "ticker": "UNH",
+        "price": 419.94,
+        "change_pct": 3.21,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 80.9,
+        "above_sma": "True",
+        "volume_ratio": 0.47,
+        "momentum_5d": 6.15,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+6.2%), overbought RSI"
+      }
+    ],
+    "watches": [
+      {
+        "ticker": "GOOGL",
+        "price": 341.89,
+        "change_pct": -0.67,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 47.7,
+        "above_sma": "False",
+        "volume_ratio": 0.25,
+        "momentum_5d": -1.65,
+        "reasons": "below 20d MA"
+      },
+      {
+        "ticker": "META",
+        "price": 694.22,
+        "change_pct": -1.59,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 39.8,
+        "above_sma": "False",
+        "volume_ratio": 0.4,
+        "momentum_5d": -5.87,
+        "reasons": "low RSI, weak 5d momentum (-5.9%), below 20d MA"
+      },
+      {
+        "ticker": "BA",
+        "price": 190.13,
+        "change_pct": -0.67,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 56.9,
+        "above_sma": "False",
+        "volume_ratio": 0.27,
+        "momentum_5d": 2.96,
+        "reasons": "below 20d MA"
+      },
+      {
+        "ticker": "NVDA",
+        "price": 216.96,
+        "change_pct": -0.06,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 36.9,
+        "above_sma": "False",
+        "volume_ratio": 0.38,
+        "momentum_5d": -1.96,
+        "reasons": "low RSI, below 20d MA"
+      },
+      {
+        "ticker": "ORCL",
+        "price": 132.7,
+        "change_pct": 2.4,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 46.6,
+        "above_sma": "False",
+        "volume_ratio": 0.36,
+        "momentum_5d": 1.65,
+        "reasons": "neutral signals"
+      }
+    ]
+  },
+  "headlines": [
+    {
+      "title": "September data shows housing market in a deep freeze",
+      "link": "https://www.cnbc.com/2026/10/20/september-data-shows-housing-market-in-a-deep-freeze.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 14:18:58 GMT",
+      "summary": "New data on the housing market's performance in September is bleak, with sales, construction and sentiment all falling more than expected."
+    },
+    {
+      "title": "SpaceX earnings live updates: Starlink growth, AI revenue and merger speculation",
+      "link": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 15:42:07 GMT",
+      "summary": "Follow SpaceX\u2019s Q3 2026 earnings live, with updates on revenue, Starlink, AI spending, Starship, guidance and SPCX stock."
+    },
+    {
+      "title": "Investors look to earnings to reset the bull market. The key level to watch on the S&P 500",
+      "link": "https://www.cnbc.com/2026/10/20/santoli-key-sp-500-level-to-watch.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 12:52:29 GMT",
+      "summary": "The key level traders are watching on the S&amp;P 500 that could mean an even bigger decline is ahead."
+    },
+    {
+      "title": "Dow jumps 500 points as solid earnings, falling crude oil stir rebound: Live updates",
+      "link": "https://www.cnbc.com/2026/10/19/stock-market-today-live-updates.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 15:21:33 GMT",
+      "summary": "The S&amp;P 500 and Nasdaq clawed back some of their steep losses from the week before."
+    },
+    {
+      "title": "Anthropic in talks with neocloud Nscale over second multibillion-dollar deal, source tells CNBC",
+      "link": "https://www.cnbc.com/2026/10/20/anthropic-nscale-data-center-deal.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 14:12:38 GMT",
+      "summary": "Anthropic and Nscale previously inked a similar deal for a data center on the same site in the U.S."
+    },
+    {
+      "title": "Bullish sentiment on stocks has cratered. Why that could be good for stocks",
+      "link": "https://www.cnbc.com/2026/10/20/bullish-sentiment-on-stocks-has-cratered-why-that-could-be-good-for-stocks.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 13:59:17 GMT",
+      "summary": "Stock market sentiment on Wall Street is downbeat. Perhaps too downbeat."
+    },
+    {
+      "title": "Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing",
+      "link": "https://www.cnbc.com/2026/10/20/ex-openai-executive-builds-1point5-billion-ai-manufacturing-startup-arda.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 13:03:31 GMT",
+      "summary": "Former OpenAI executive Bob McGrew is launching Arda at a $1.5 billion."
+    },
+    {
+      "title": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 50%",
+      "link": "https://www.cnbc.com/2026/10/20/salesforce-braze-acquisition-deal.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 14:09:16 GMT",
+      "summary": "The company's latest acquisition is expected to close in fiscal 2028, and will see Braze shareholders receive $47.50 in cash per share."
+    },
+    {
+      "title": "Novo's next-generation obesity drug shows 25% weight loss in women in late-stage analysis",
+      "link": "https://www.cnbc.com/2026/10/20/novo-cagrisema-women-weight-loss-analysis.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 12:50:24 GMT",
+      "summary": "Novo released new evidence that its experimental CagriSema injection can improve upon the weight loss with its blockbuster GLP-1 obesity injection, Wegovy."
+    },
+    {
+      "title": "What options traders expect from SpaceX earnings after the bell",
+      "link": "https://www.cnbc.com/2026/10/20/spacex-reports-after-the-bell-heres-what-options-traders-expect-.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 14:01:49 GMT",
+      "summary": "It's been a busy three months for SpaceX. Traders think that means more gains for the stock after it reports earnings after the bell today."
+    },
+    {
+      "title": "What\u2019s making Europe so angry? The frustration behind the protests",
+      "link": "https://www.cnbc.com/2026/10/20/france-protests-europe-cost-living-violence.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 07:19:16 GMT",
+      "summary": "Protests broke out in France and several European countries as people railed against living costs, poor schooling conditions, and a housing crisis."
+    },
+    {
+      "title": "France to deploy military as it braces for fresh unrest this weekend",
+      "link": "https://www.cnbc.com/2026/10/20/france-protests-curfews-macron-gulf-trip.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 15:01:38 GMT",
+      "summary": "France will deploy Sentinelle troops for Saturday's protests, Interior Minister Laurent Nu\u00f1ez said."
+    },
+    {
+      "title": "Alberta votes by large majority to remain part of Canada in boost for Carney",
+      "link": "https://www.cnbc.com/2026/10/20/alberta-canada-vote-remain.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 12:32:19 GMT",
+      "summary": "Alberta residents voted to remain part of Canada in the province's first-ever referendum \u200con separation."
+    },
+    {
+      "title": "Walmart launches joint membership with Sam's Club as it leans into delivery, gas discounts",
+      "link": "https://www.cnbc.com/2026/10/20/walmart-sams-club-plus-membership.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 10:00:01 GMT",
+      "summary": "Walmart is now offering a joint membership with Sam's Club for $120 per year as the retailer further leans into convenience."
+    },
+    {
+      "title": "Judge dismisses Sam Altman's sister's sexual abuse lawsuit",
+      "link": "https://www.cnbc.com/2026/10/20/judge-dismisses-sam-altmans-sisters-sexual-abuse-lawsuit.html",
+      "source": "CNBC",
+      "published": "Tue, 20 Oct 2026 14:20:49 GMT",
+      "summary": "A U.S. District Judge dismissed a lawsuit by Sam Alman's sister accusing the OpenAI CEO of sexual abuse, after did not appear for medical examinations."
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI Market Overview",
+      "body": "Equities traded in positive territory across the board, with the major indices posting a steady climb. The average gain of 0.9% suggests measured optimism.\n\nS&P 500 at 7,721 (+0.40%). Nasdaq at 26,484 (+0.20%). Dow at 52,483 (+1.00%). Russell 2000 at 2,777 (+1.80%, outperforming large caps).\n\nVIX at 17.9 \u2014 complacent market, no acute stress signals.\n\nTop stock picks this morning: NKE ($37.9, +1.7%), SBUX ($99.8, +2.0%). These names show the strongest combination of technical momentum and value signals."
+    },
+    {
+      "title": "Stock Picks",
+      "body": "Based on technical analysis of 2 qualifying names, the strongest BUY signals are:  NKE at $37.85 (\u25b2+1.72%) \u2014 RSI 70, above 20d MA with momentum, strong 5d momentum (+7.2%). SBUX at $99.83 (\u25b2+2.00%) \u2014 RSI 66, above 20d MA with momentum, strong 5d momentum (+7.1%). These recommendations combine RSI momentum, moving average positioning, and volume confirmation. Always perform your own due diligence before trading. On the watch list (potential reversals): GOOGL (RSI 48), META (RSI 40), BA (RSI 57)."
+    },
+    {
+      "title": "Sector Analysis",
+      "body": "Leading: Healthcare (XLV) (+2.3%). Lagging: Energy (XLE) (-0.8%). 3.1% spread suggests moderate sector rotation. Only 3/6 sectors green \u2014 selective market."
+    },
+    {
+      "title": "Commodities Brief",
+      "body": "Gold flat at $4,152. Crude dropping -5.9% to $97.53. Silver moved +1.6%. Natural gas volatile at -2.5%."
+    },
+    {
+      "title": "FX Overview",
+      "body": "Dollar slightly softer (0.1%). USDCAD weakening (-0.5%). AUDUSD strengthening (+0.4%)."
+    },
+    {
+      "title": "Macro Context",
+      "body": "S&P 500 sits marginally above its 30-day level (+0.2%)."
+    }
+  ],
+  "summary": "S&P 500: 7721.33  \u25b2 +0.40%\nNasdaq: 26483.8  \u25b2 +0.20%\nDow Jones: 52483.31  \u25b2 +1.00%\nRussell 2000: 2777.3  \u25b2 +1.80%\nGold: 4152.1  \u25bc -0.19%\nSilver: 57.92  \u25b2 +1.65%\nCrude Oil: 97.53  \u25bc -5.91%\nNatural Gas: 2.98  \u25bc -2.52%\nEUR/USD: 1.12  \u25b2 +0.08%\nGBP/USD: 1.34  \u25b2 +0.28%\nUSD/JPY: 158.18  \u25b2 +0.24%\nUSD/CHF: 0.83  \u25b2 +0.17%"
+}
