@@ -1,0 +1,562 @@
+{
+  "date": "Wednesday, October 21, 2026",
+  "timestamp": "2026-10-21T12:00:38.218774-04:00",
+  "market_data": {
+    "US Indices": {
+      "S&P 500": {
+        "price": 7751.14,
+        "change": 38.57,
+        "change_pct": 0.5,
+        "high": 7755.21,
+        "low": 7709.34,
+        "volume": 1003213000,
+        "ytd_change_pct": 0.61,
+        "sma_20": 7735.2,
+        "rsi_14": 57.8,
+        "volume_ratio": 0.2,
+        "name": "S&P 500"
+      },
+      "Nasdaq": {
+        "price": 26711.86,
+        "change": 287.04,
+        "change_pct": 1.09,
+        "high": 26734.78,
+        "low": 26507.07,
+        "volume": 3290437000,
+        "ytd_change_pct": -0.84,
+        "sma_20": 26964.43,
+        "rsi_14": 47.5,
+        "volume_ratio": 0.43,
+        "name": "Nasdaq"
+      },
+      "Dow Jones": {
+        "price": 52628.97,
+        "change": 133.09,
+        "change_pct": 0.25,
+        "high": 52711.93,
+        "low": 52392.28,
+        "volume": 137993804,
+        "ytd_change_pct": 2.49,
+        "sma_20": 51614.42,
+        "rsi_14": 76.1,
+        "volume_ratio": 0.34,
+        "name": "Dow Jones"
+      },
+      "Russell 2000": {
+        "price": 2785.77,
+        "change": 12.35,
+        "change_pct": 0.45,
+        "high": 2791.72,
+        "low": 2779.31,
+        "volume": 0,
+        "ytd_change_pct": -1.76,
+        "sma_20": 2794.53,
+        "rsi_14": 46.9,
+        "volume_ratio": 0.0,
+        "name": "Russell 2000"
+      }
+    },
+    "Forex": {
+      "EUR/USD": {
+        "price": 1.12,
+        "change": 0.0,
+        "change_pct": 0.07,
+        "high": 1.12,
+        "low": 1.12,
+        "volume": 0,
+        "ytd_change_pct": -1.39,
+        "sma_20": 1.13,
+        "rsi_14": 36.1,
+        "volume_ratio": 1.0,
+        "name": "EUR/USD"
+      },
+      "GBP/USD": {
+        "price": 1.34,
+        "change": 0.01,
+        "change_pct": 0.59,
+        "high": 1.34,
+        "low": 1.34,
+        "volume": 0,
+        "ytd_change_pct": 1.1,
+        "sma_20": 1.33,
+        "rsi_14": 60.7,
+        "volume_ratio": 1.0,
+        "name": "GBP/USD"
+      },
+      "USD/JPY": {
+        "price": 158.13,
+        "change": -0.39,
+        "change_pct": -0.24,
+        "high": 158.39,
+        "low": 157.83,
+        "volume": 0,
+        "ytd_change_pct": -0.08,
+        "sma_20": 158.03,
+        "rsi_14": 57.2,
+        "volume_ratio": 1.0,
+        "name": "USD/JPY"
+      },
+      "USD/CHF": {
+        "price": 0.83,
+        "change": -0.0,
+        "change_pct": -0.19,
+        "high": 0.83,
+        "low": 0.82,
+        "volume": 0,
+        "ytd_change_pct": 0.03,
+        "sma_20": 0.83,
+        "rsi_14": 35.0,
+        "volume_ratio": 1.0,
+        "name": "USD/CHF"
+      },
+      "USD/CAD": {
+        "price": 1.41,
+        "change": -0.0,
+        "change_pct": -0.29,
+        "high": 1.41,
+        "low": 1.4,
+        "volume": 0,
+        "ytd_change_pct": -0.29,
+        "sma_20": 1.42,
+        "rsi_14": 31.5,
+        "volume_ratio": 1.0,
+        "name": "USD/CAD"
+      },
+      "AUD/USD": {
+        "price": 0.7,
+        "change": 0.0,
+        "change_pct": 0.65,
+        "high": 0.7,
+        "low": 0.7,
+        "volume": 0,
+        "ytd_change_pct": -0.09,
+        "sma_20": 0.7,
+        "rsi_14": 61.6,
+        "volume_ratio": 1.0,
+        "name": "AUD/USD"
+      }
+    },
+    "Commodities": {
+      "Gold": {
+        "price": 4151.4,
+        "change": 8.8,
+        "change_pct": 0.21,
+        "high": 4160.6,
+        "low": 4124.0,
+        "volume": 105532,
+        "ytd_change_pct": -3.41,
+        "sma_20": 4182.88,
+        "rsi_14": 44.0,
+        "volume_ratio": 0.75,
+        "name": "Gold"
+      },
+      "Silver": {
+        "price": 57.74,
+        "change": 0.03,
+        "change_pct": 0.05,
+        "high": 58.42,
+        "low": 57.22,
+        "volume": 22638,
+        "ytd_change_pct": -9.02,
+        "sma_20": 59.66,
+        "rsi_14": 38.5,
+        "volume_ratio": 17.37,
+        "name": "Silver"
+      },
+      "Crude Oil": {
+        "price": 97.2,
+        "change": -4.59,
+        "change_pct": -4.51,
+        "high": 100.4,
+        "low": 96.63,
+        "volume": 206178,
+        "ytd_change_pct": 2.74,
+        "sma_20": 93.94,
+        "rsi_14": 58.2,
+        "volume_ratio": 0.78,
+        "name": "Crude Oil"
+      },
+      "Natural Gas": {
+        "price": 2.83,
+        "change": -0.13,
+        "change_pct": -4.49,
+        "high": 3.0,
+        "low": 2.81,
+        "volume": 133894,
+        "ytd_change_pct": -14.16,
+        "sma_20": 3.11,
+        "rsi_14": 43.3,
+        "volume_ratio": 0.72,
+        "name": "Natural Gas"
+      }
+    },
+    "Sectors": {
+      "Tech (XLK)": {
+        "price": 188.38,
+        "change": 2.94,
+        "change_pct": 1.59,
+        "high": 188.65,
+        "low": 186.47,
+        "volume": 3871741,
+        "ytd_change_pct": -3.25,
+        "sma_20": 194.49,
+        "rsi_14": 34.6,
+        "volume_ratio": 0.47,
+        "name": "Tech (XLK)"
+      },
+      "Financials (XLF)": {
+        "price": 56.06,
+        "change": 0.34,
+        "change_pct": 0.62,
+        "high": 56.07,
+        "low": 55.64,
+        "volume": 11060101,
+        "ytd_change_pct": 2.81,
+        "sma_20": 54.53,
+        "rsi_14": 75.5,
+        "volume_ratio": 0.31,
+        "name": "Financials (XLF)"
+      },
+      "Energy (XLE)": {
+        "price": 68.0,
+        "change": 0.03,
+        "change_pct": 0.04,
+        "high": 68.36,
+        "low": 67.51,
+        "volume": 11715018,
+        "ytd_change_pct": 8.62,
+        "sma_20": 64.78,
+        "rsi_14": 78.1,
+        "volume_ratio": 0.38,
+        "name": "Energy (XLE)"
+      },
+      "Healthcare (XLV)": {
+        "price": 178.2,
+        "change": -1.62,
+        "change_pct": -0.9,
+        "high": 179.68,
+        "low": 177.64,
+        "volume": 4592224,
+        "ytd_change_pct": 4.9,
+        "sma_20": 171.44,
+        "rsi_14": 74.1,
+        "volume_ratio": 0.55,
+        "name": "Healthcare (XLV)"
+      },
+      "Industrials (XLI)": {
+        "price": 168.25,
+        "change": 1.45,
+        "change_pct": 0.87,
+        "high": 168.85,
+        "low": 167.62,
+        "volume": 3446088,
+        "ytd_change_pct": -0.34,
+        "sma_20": 168.61,
+        "rsi_14": 48.6,
+        "volume_ratio": 0.48,
+        "name": "Industrials (XLI)"
+      },
+      "Consumer Disc (XLY)": {
+        "price": 115.71,
+        "change": 0.21,
+        "change_pct": 0.19,
+        "high": 115.89,
+        "low": 115.06,
+        "volume": 2644921,
+        "ytd_change_pct": 4.89,
+        "sma_20": 111.62,
+        "rsi_14": 77.8,
+        "volume_ratio": 0.39,
+        "name": "Consumer Disc (XLY)"
+      }
+    },
+    "Volatility": {
+      "VIX": {
+        "price": 16.63,
+        "change": -0.68,
+        "change_pct": -3.93,
+        "high": 17.58,
+        "low": 16.51,
+        "volume": 0,
+        "ytd_change_pct": 6.13,
+        "sma_20": 16.14,
+        "rsi_14": 51.0,
+        "volume_ratio": 1.0
+      }
+    }
+  },
+  "stock_picks": {
+    "buys": [
+      {
+        "ticker": "SLB",
+        "price": 50.94,
+        "change_pct": 1.92,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 62.7,
+        "above_sma": "True",
+        "volume_ratio": 0.35,
+        "momentum_5d": 5.31,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+5.3%)"
+      }
+    ],
+    "holds": [
+      {
+        "ticker": "AMD",
+        "price": 550.74,
+        "change_pct": 2.99,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 34.5,
+        "above_sma": "False",
+        "volume_ratio": 0.43,
+        "momentum_5d": -2.04,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "INTC",
+        "price": 92.74,
+        "change_pct": 1.15,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 14.0,
+        "above_sma": "False",
+        "volume_ratio": 0.38,
+        "momentum_5d": -2.76,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "ASML",
+        "price": 1682.23,
+        "change_pct": 3.15,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 34.0,
+        "above_sma": "False",
+        "volume_ratio": 0.5,
+        "momentum_5d": 1.5,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "GS",
+        "price": 898.83,
+        "change_pct": 1.58,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 50.9,
+        "above_sma": "True",
+        "volume_ratio": 0.31,
+        "momentum_5d": 0.85,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "BAC",
+        "price": 50.99,
+        "change_pct": 0.68,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 31.4,
+        "above_sma": "False",
+        "volume_ratio": 0.22,
+        "momentum_5d": -1.38,
+        "reasons": "oversold RSI"
+      }
+    ],
+    "watches": [
+      {
+        "ticker": "JNJ",
+        "price": 255.09,
+        "change_pct": -1.65,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 46.8,
+        "above_sma": "False",
+        "volume_ratio": 0.25,
+        "momentum_5d": 0.71,
+        "reasons": "below 20d MA"
+      },
+      {
+        "ticker": "GOOGL",
+        "price": 332.98,
+        "change_pct": -2.15,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 44.9,
+        "above_sma": "False",
+        "volume_ratio": 0.65,
+        "momentum_5d": -4.65,
+        "reasons": "low RSI, below 20d MA"
+      },
+      {
+        "ticker": "META",
+        "price": 711.16,
+        "change_pct": 2.44,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 45.6,
+        "above_sma": "False",
+        "volume_ratio": 0.39,
+        "momentum_5d": -3.47,
+        "reasons": "neutral signals"
+      },
+      {
+        "ticker": "AVGO",
+        "price": 337.57,
+        "change_pct": 0.96,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 46.9,
+        "above_sma": "False",
+        "volume_ratio": 0.28,
+        "momentum_5d": -1.96,
+        "reasons": "neutral signals"
+      },
+      {
+        "ticker": "ORCL",
+        "price": 130.13,
+        "change_pct": -0.77,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 43.7,
+        "above_sma": "False",
+        "volume_ratio": 0.4,
+        "momentum_5d": -3.22,
+        "reasons": "low RSI, below 20d MA"
+      }
+    ]
+  },
+  "headlines": [
+    {
+      "title": "How Ukraine\u2019s drone strikes on Russia crippled the world\u2019s second largest diesel supplier",
+      "link": "https://www.cnbc.com/2026/10/21/ukraine-russia-drone-diesel-refinery-trump-putin-zelenskyy.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 15:35:53 GMT",
+      "summary": "President Donald Trump has blamed Ukraine for surging diesel prices that are hurting Republicans' election chances with the midterms just two weeks away."
+    },
+    {
+      "title": "SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up",
+      "link": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 14:21:39 GMT",
+      "summary": "SpaceX shares jumped after the company reported surging revenue growth in its third quarter, and owner Elon Musk floated a potential SpaceX-Tesla merger."
+    },
+    {
+      "title": "Intel hits construction milestone at Ohio chip fab that\u2019s at least 5 years behind schedule",
+      "link": "https://www.cnbc.com/2026/10/21/intel-hits-construction-milestone-at-delayed-ohio-chip-fab-.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 15:00:01 GMT",
+      "summary": "Intel has installed the first major structural truss at its delayed Ohio chip fab, but the company has yet to announce a major outside customer."
+    },
+    {
+      "title": "Nasdaq gains as Musk's SpaceX and Tesla revive tech rally: Live updates",
+      "link": "https://www.cnbc.com/2026/10/20/stock-market-today-live-updates.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 15:36:29 GMT",
+      "summary": "U.S. stocks were up on Wednesday as traders weighed the latest round of earnings reports."
+    },
+    {
+      "title": "EBay to lay off 9% of workforce in its second round of job cuts this year",
+      "link": "https://www.cnbc.com/2026/10/21/ebay-layoffs-workforce-cuts.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 15:17:03 GMT",
+      "summary": "EBay will lay off 9% of its workforce, or about 1,000 employees, as it works to focus on its \"top strategic priorities.\""
+    },
+    {
+      "title": "Midterms are setting up stocks for a \u2018sell the rumor, buy the news\u2019 event, says Alpine Macro",
+      "link": "https://www.cnbc.com/2026/10/21/midterm-elections-stocks-alpine-macro.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 14:05:59 GMT",
+      "summary": "The Nov. 3 midterm elections in the U.S. set up stocks for a \u201csell the rumor, buy the news\u201d event, according to Alpine Macro."
+    },
+    {
+      "title": "The political ad wars are still being fought over the airwaves even as digital gains share",
+      "link": "https://www.cnbc.com/2026/10/21/why-broadcast-tv-still-dominates-political-ad-spending.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 14:40:02 GMT",
+      "summary": "Broadcast TV is set to capture nearly half of political advertising spending ahead of the midterm election as local stations benefit from record spending."
+    },
+    {
+      "title": "United Airlines set to open its biggest airport lounge in $2.6 billion overhaul at Houston hub",
+      "link": "https://www.cnbc.com/2026/10/21/united-airlines-biggest-airport-lounge-houston.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 13:44:35 GMT",
+      "summary": "United is opening a 54,000-square-foot lounge as part of the revamp of Houston's George Bush Intercontinental Airport."
+    },
+    {
+      "title": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck",
+      "link": "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 12:43:49 GMT",
+      "summary": "Nvidia says its DSX Pod AI Factory, which combines seven Vera Rubin racks in a shipping container, could cut the time to start serving AI tokens to 14 days."
+    },
+    {
+      "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
+      "link": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 15:30:50 GMT",
+      "summary": "Wall Street\u2019s Big Three have generated $52 billion in equity trading revenue this year, capturing about 80% of the market on rising margin lending to hedge funds."
+    },
+    {
+      "title": "Mortgage rates drop for the first time in 2 months, but demand still falls further",
+      "link": "https://www.cnbc.com/2026/10/21/mortgage-rates-drop-for-the-first-time-in-2-months-but-demand-falls.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 13:13:48 GMT",
+      "summary": "Mortgage rates finally came down a little, but borrowers are still having trouble getting into the housing market."
+    },
+    {
+      "title": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes",
+      "link": "https://www.cnbc.com/2026/10/20/housing-mortgage-rates-real-estate-federal-reserve.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 11:20:58 GMT",
+      "summary": "Housing data deteriorated further in September, according to separate reports Tuesday."
+    },
+    {
+      "title": "OpenAI's most powerful AI models disabled their own safety monitoring \u2014 and one lied about it",
+      "link": "https://www.cnbc.com/2026/10/21/openai-ai-models-safety-monitoring.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 07:49:48 GMT",
+      "summary": "Warnings about the risks of developing increasingly advanced AI systems have ramped up in recent months, amid cyberattacks from rogue AI models."
+    },
+    {
+      "title": "Tokenized stock trading takes off overseas as Goldman, other U.S. companies object",
+      "link": "https://www.cnbc.com/2026/10/21/tokenized-stocks-us-companies-object.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 12:33:34 GMT",
+      "summary": "Tokenized stocks are gaining momentum in international markets, even as major U.S. companies are pushing back against efforts to introduce them domestically."
+    },
+    {
+      "title": "Shares of this hookah maker could rally 50%, says Roth. Here's why",
+      "link": "https://www.cnbc.com/2026/10/21/air-global-roth-buy-rating-price-target.html",
+      "source": "CNBC",
+      "published": "Wed, 21 Oct 2026 15:10:24 GMT",
+      "summary": "This hookah producer is is quietly building a niche but mighty corner in the tobacco industry."
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI Market Overview",
+      "body": "Equities traded in positive territory across the board, with the major indices posting a steady climb. The average gain of 0.6% suggests measured optimism.\n\nS&P 500 at 7,751 (+0.50%). Nasdaq at 26,712 (+1.09% (tech-led)). Dow at 52,629 (+0.25%). Russell 2000 at 2,786 (+0.45%, in line large caps).\n\nVIX at 16.6 \u2014 complacent market, no acute stress signals.\n\nTop stock picks this morning: SLB ($50.9, +1.9%). These names show the strongest combination of technical momentum and value signals."
+    },
+    {
+      "title": "Stock Picks",
+      "body": "Based on technical analysis of 1 qualifying names, the strongest BUY signals are:  SLB at $50.94 (\u25b2+1.92%) \u2014 RSI 63, above 20d MA with momentum, strong 5d momentum (+5.3%). These recommendations combine RSI momentum, moving average positioning, and volume confirmation. Always perform your own due diligence before trading. On the watch list (potential reversals): JNJ (RSI 47), GOOGL (RSI 45), META (RSI 46)."
+    },
+    {
+      "title": "Sector Analysis",
+      "body": "Leading: Tech (XLK) (+1.6%). Lagging: Healthcare (XLV) (-0.9%). 2.5% spread suggests moderate sector rotation. 5/6 sectors green \u2014 bullish internals."
+    },
+    {
+      "title": "Commodities Brief",
+      "body": "Gold flat at $4,151. Crude dropping -4.5% to $97.20. Natural gas volatile at -4.5%."
+    },
+    {
+      "title": "FX Overview",
+      "body": "Dollar mixed vs majors. AUDUSD strengthening (+0.7%). GBPUSD strengthening (+0.6%)."
+    },
+    {
+      "title": "Macro Context",
+      "body": "S&P 500 sits marginally above its 30-day level (+0.6%)."
+    }
+  ],
+  "summary": "S&P 500: 7751.14  \u25b2 +0.50%\nNasdaq: 26711.86  \u25b2 +1.09%\nDow Jones: 52628.97  \u25b2 +0.25%\nRussell 2000: 2785.77  \u25b2 +0.45%\nGold: 4151.4  \u25b2 +0.21%\nSilver: 57.74  \u25b2 +0.05%\nCrude Oil: 97.2  \u25bc -4.51%\nNatural Gas: 2.83  \u25bc -4.49%\nEUR/USD: 1.12  \u25b2 +0.07%\nGBP/USD: 1.34  \u25b2 +0.59%\nUSD/JPY: 158.13  \u25bc -0.24%\nUSD/CHF: 0.83  \u25bc -0.19%"
+}
