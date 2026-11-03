@@ -1,0 +1,562 @@
+{
+  "date": "Tuesday, November 03, 2026",
+  "timestamp": "2026-11-03T14:31:06.314080-04:00",
+  "market_data": {
+    "US Indices": {
+      "S&P 500": {
+        "price": 7587.31,
+        "change": 45.91,
+        "change_pct": 0.61,
+        "high": 7592.27,
+        "low": 7545.39,
+        "volume": 1392081000,
+        "ytd_change_pct": -2.75,
+        "sma_20": 7706.7,
+        "rsi_14": 40.7,
+        "volume_ratio": 0.27,
+        "name": "S&P 500"
+      },
+      "Nasdaq": {
+        "price": 25436.62,
+        "change": 272.31,
+        "change_pct": 1.08,
+        "high": 25474.46,
+        "low": 25246.63,
+        "volume": 4348632000,
+        "ytd_change_pct": -7.63,
+        "sma_20": 26451.84,
+        "rsi_14": 34.9,
+        "volume_ratio": 0.55,
+        "name": "Nasdaq"
+      },
+      "Dow Jones": {
+        "price": 51872.84,
+        "change": -111.14,
+        "change_pct": -0.21,
+        "high": 51932.63,
+        "low": 51593.16,
+        "volume": 200987293,
+        "ytd_change_pct": 1.35,
+        "sma_20": 52048.69,
+        "rsi_14": 53.5,
+        "volume_ratio": 0.48,
+        "name": "Dow Jones"
+      },
+      "Russell 2000": {
+        "price": 2827.86,
+        "change": 21.98,
+        "change_pct": 0.78,
+        "high": 2836.8,
+        "low": 2812.37,
+        "volume": 0,
+        "ytd_change_pct": 1.24,
+        "sma_20": 2788.68,
+        "rsi_14": 65.7,
+        "volume_ratio": 0.0,
+        "name": "Russell 2000"
+      }
+    },
+    "Forex": {
+      "EUR/USD": {
+        "price": 1.12,
+        "change": 0.0,
+        "change_pct": 0.38,
+        "high": 1.12,
+        "low": 1.12,
+        "volume": 0,
+        "ytd_change_pct": -0.48,
+        "sma_20": 1.12,
+        "rsi_14": 49.1,
+        "volume_ratio": 1.0,
+        "name": "EUR/USD"
+      },
+      "GBP/USD": {
+        "price": 1.34,
+        "change": 0.0,
+        "change_pct": 0.29,
+        "high": 1.34,
+        "low": 1.34,
+        "volume": 0,
+        "ytd_change_pct": 1.19,
+        "sma_20": 1.33,
+        "rsi_14": 67.7,
+        "volume_ratio": 1.0,
+        "name": "GBP/USD"
+      },
+      "USD/JPY": {
+        "price": 158.55,
+        "change": 0.88,
+        "change_pct": 0.56,
+        "high": 158.6,
+        "low": 157.75,
+        "volume": 0,
+        "ytd_change_pct": 0.16,
+        "sma_20": 157.95,
+        "rsi_14": 51.8,
+        "volume_ratio": 1.0,
+        "name": "USD/JPY"
+      },
+      "USD/CHF": {
+        "price": 0.82,
+        "change": -0.0,
+        "change_pct": -0.52,
+        "high": 0.82,
+        "low": 0.81,
+        "volume": 0,
+        "ytd_change_pct": -1.41,
+        "sma_20": 0.83,
+        "rsi_14": 34.3,
+        "volume_ratio": 1.0,
+        "name": "USD/CHF"
+      },
+      "USD/CAD": {
+        "price": 1.4,
+        "change": 0.0,
+        "change_pct": 0.16,
+        "high": 1.4,
+        "low": 1.39,
+        "volume": 0,
+        "ytd_change_pct": -1.54,
+        "sma_20": 1.41,
+        "rsi_14": 19.4,
+        "volume_ratio": 1.0,
+        "name": "USD/CAD"
+      },
+      "AUD/USD": {
+        "price": 0.7,
+        "change": -0.01,
+        "change_pct": -0.75,
+        "high": 0.7,
+        "low": 0.7,
+        "volume": 0,
+        "ytd_change_pct": -0.08,
+        "sma_20": 0.7,
+        "rsi_14": 48.7,
+        "volume_ratio": 1.0,
+        "name": "AUD/USD"
+      }
+    },
+    "Commodities": {
+      "Gold": {
+        "price": 3942.4,
+        "change": -27.2,
+        "change_pct": -0.69,
+        "high": 3981.7,
+        "low": 3904.1,
+        "volume": 143259,
+        "ytd_change_pct": -4.79,
+        "sma_20": 4093.44,
+        "rsi_14": 36.2,
+        "volume_ratio": 0.9,
+        "name": "Gold"
+      },
+      "Silver": {
+        "price": 49.76,
+        "change": -0.97,
+        "change_pct": -1.9,
+        "high": 50.92,
+        "low": 48.62,
+        "volume": 46769,
+        "ytd_change_pct": -16.94,
+        "sma_20": 55.63,
+        "rsi_14": 30.1,
+        "volume_ratio": 19.23,
+        "name": "Silver"
+      },
+      "Crude Oil": {
+        "price": 95.83,
+        "change": -0.63,
+        "change_pct": -0.65,
+        "high": 98.82,
+        "low": 93.59,
+        "volume": 301279,
+        "ytd_change_pct": 8.55,
+        "sma_20": 98.11,
+        "rsi_14": 51.0,
+        "volume_ratio": 1.14,
+        "name": "Crude Oil"
+      },
+      "Natural Gas": {
+        "price": 2.88,
+        "change": 0.02,
+        "change_pct": 0.77,
+        "high": 2.93,
+        "low": 2.85,
+        "volume": 115958,
+        "ytd_change_pct": -10.15,
+        "sma_20": 2.98,
+        "rsi_14": 36.1,
+        "volume_ratio": 0.62,
+        "name": "Natural Gas"
+      }
+    },
+    "Sectors": {
+      "Tech (XLK)": {
+        "price": 176.91,
+        "change": 2.69,
+        "change_pct": 1.55,
+        "high": 177.47,
+        "low": 174.8,
+        "volume": 5064463,
+        "ytd_change_pct": -12.15,
+        "sma_20": 188.27,
+        "rsi_14": 35.7,
+        "volume_ratio": 0.53,
+        "name": "Tech (XLK)"
+      },
+      "Financials (XLF)": {
+        "price": 57.29,
+        "change": -0.27,
+        "change_pct": -0.46,
+        "high": 57.47,
+        "low": 56.96,
+        "volume": 12967062,
+        "ytd_change_pct": 6.6,
+        "sma_20": 55.68,
+        "rsi_14": 70.2,
+        "volume_ratio": 0.4,
+        "name": "Financials (XLF)"
+      },
+      "Energy (XLE)": {
+        "price": 67.17,
+        "change": -0.08,
+        "change_pct": -0.13,
+        "high": 67.49,
+        "low": 66.46,
+        "volume": 19171309,
+        "ytd_change_pct": 6.01,
+        "sma_20": 67.48,
+        "rsi_14": 48.1,
+        "volume_ratio": 0.6,
+        "name": "Energy (XLE)"
+      },
+      "Healthcare (XLV)": {
+        "price": 185.02,
+        "change": 0.42,
+        "change_pct": 0.23,
+        "high": 185.71,
+        "low": 183.62,
+        "volume": 7090216,
+        "ytd_change_pct": 9.6,
+        "sma_20": 177.45,
+        "rsi_14": 76.7,
+        "volume_ratio": 0.73,
+        "name": "Healthcare (XLV)"
+      },
+      "Industrials (XLI)": {
+        "price": 171.93,
+        "change": 2.22,
+        "change_pct": 1.31,
+        "high": 172.4,
+        "low": 170.34,
+        "volume": 5691274,
+        "ytd_change_pct": 2.44,
+        "sma_20": 168.08,
+        "rsi_14": 62.1,
+        "volume_ratio": 0.73,
+        "name": "Industrials (XLI)"
+      },
+      "Consumer Disc (XLY)": {
+        "price": 117.35,
+        "change": -0.82,
+        "change_pct": -0.69,
+        "high": 118.39,
+        "low": 116.85,
+        "volume": 4727783,
+        "ytd_change_pct": 5.37,
+        "sma_20": 114.18,
+        "rsi_14": 68.1,
+        "volume_ratio": 0.65,
+        "name": "Consumer Disc (XLY)"
+      }
+    },
+    "Volatility": {
+      "VIX": {
+        "price": 20.44,
+        "change": -0.71,
+        "change_pct": -3.36,
+        "high": 21.91,
+        "low": 20.29,
+        "volume": 0,
+        "ytd_change_pct": 35.54,
+        "sma_20": 17.55,
+        "rsi_14": 60.2,
+        "volume_ratio": 1.0
+      }
+    }
+  },
+  "stock_picks": {
+    "buys": [
+      {
+        "ticker": "GE",
+        "price": 321.09,
+        "change_pct": 1.68,
+        "signal": "BUY",
+        "score": 3,
+        "rsi": 57.6,
+        "above_sma": "True",
+        "volume_ratio": 0.42,
+        "momentum_5d": 6.63,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+6.6%)"
+      }
+    ],
+    "holds": [
+      {
+        "ticker": "META",
+        "price": 623.48,
+        "change_pct": 2.76,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 18.0,
+        "above_sma": "False",
+        "volume_ratio": 0.33,
+        "momentum_5d": 1.79,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "BAC",
+        "price": 49.69,
+        "change_pct": 0.24,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 33.6,
+        "above_sma": "False",
+        "volume_ratio": 0.56,
+        "momentum_5d": -2.28,
+        "reasons": "oversold RSI"
+      },
+      {
+        "ticker": "UNH",
+        "price": 404.73,
+        "change_pct": 1.07,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 55.6,
+        "above_sma": "True",
+        "volume_ratio": 0.27,
+        "momentum_5d": -0.58,
+        "reasons": "above 20d MA with momentum"
+      },
+      {
+        "ticker": "LLY",
+        "price": 1421.34,
+        "change_pct": 0.73,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 80.3,
+        "above_sma": "True",
+        "volume_ratio": 0.46,
+        "momentum_5d": 10.33,
+        "reasons": "above 20d MA with momentum, strong 5d momentum (+10.3%), overbought RSI"
+      },
+      {
+        "ticker": "SLB",
+        "price": 52.47,
+        "change_pct": 0.32,
+        "signal": "HOLD",
+        "score": 2,
+        "rsi": 66.8,
+        "above_sma": "True",
+        "volume_ratio": 0.33,
+        "momentum_5d": -2.37,
+        "reasons": "above 20d MA with momentum"
+      }
+    ],
+    "watches": [
+      {
+        "ticker": "ORCL",
+        "price": 126.93,
+        "change_pct": 6.47,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 47.4,
+        "above_sma": "False",
+        "volume_ratio": 1.41,
+        "momentum_5d": -12.18,
+        "reasons": "weak 5d momentum (-12.2%)"
+      },
+      {
+        "ticker": "MRK",
+        "price": 144.79,
+        "change_pct": -2.41,
+        "signal": "WATCH",
+        "score": -1,
+        "rsi": 46.4,
+        "above_sma": "False",
+        "volume_ratio": 0.37,
+        "momentum_5d": 2.74,
+        "reasons": "below 20d MA"
+      },
+      {
+        "ticker": "AAPL",
+        "price": 332.11,
+        "change_pct": -1.84,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 38.6,
+        "above_sma": "False",
+        "volume_ratio": 0.86,
+        "momentum_5d": -3.41,
+        "reasons": "low RSI, below 20d MA"
+      },
+      {
+        "ticker": "AMZN",
+        "price": 250.77,
+        "change_pct": 2.09,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 47.4,
+        "above_sma": "False",
+        "volume_ratio": 0.44,
+        "momentum_5d": -1.5,
+        "reasons": "neutral signals"
+      },
+      {
+        "ticker": "AVGO",
+        "price": 332.22,
+        "change_pct": 3.1,
+        "signal": "WATCH",
+        "score": 0,
+        "rsi": 43.8,
+        "above_sma": "False",
+        "volume_ratio": 0.36,
+        "momentum_5d": -5.57,
+        "reasons": "low RSI, weak 5d momentum (-5.6%)"
+      }
+    ]
+  },
+  "headlines": [
+    {
+      "title": "Midterm elections 2026 live updates: Economy, inflation and other voter concerns",
+      "link": "https://www.cnbc.com/2026/11/03/midterm-elections-2026-live-updates.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:28:48 GMT",
+      "summary": "Follow 2026 midterm elections live updates, including House and Senate races, Texas, Georgia, Ohio and Minnesota, and key results as polls close."
+    },
+    {
+      "title": "Binance co-CEO Richard Teng says hackers used fake job interviews, AI tool to steal $6.3 billion in crypto",
+      "link": "https://www.cnbc.com/2026/11/03/binance-co-ceo-teng-says-hackers-used-fake-job-interviews-to-steal-6point3-billion-in-crypto.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 17:58:41 GMT",
+      "summary": "Binance has replenished 98% of $6.34 billion in affected assets, according to a security report the crypto exchange issued Tuesday."
+    },
+    {
+      "title": "Disney plans several thousand layoffs, asks some managers to cut costs by up to 20%",
+      "link": "https://www.cnbc.com/2026/11/03/disney-layoffs-cost-cuts.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 17:05:29 GMT",
+      "summary": "Disney expects to lay off several thousand employees in the latest round of job cuts for the entertainment giant."
+    },
+    {
+      "title": "AI-generated 'slopaganda' in political ads puts internet platforms on alert",
+      "link": "https://www.cnbc.com/2026/11/03/ai-generated-slopaganda-in-political-ads-puts-platforms-on-alert.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 17:37:31 GMT",
+      "summary": "Tuesday's midterm elections follow record spending on AI-generated political ads."
+    },
+    {
+      "title": "Bill Ackman warns of 'casino' stock market as speculative trading grows",
+      "link": "https://www.cnbc.com/2026/11/03/bill-ackman-casino-stock-market.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 16:23:26 GMT",
+      "summary": "\"We're back to the casino-type markets when there was 95% leverage,\" said the founder of Pershing Square Capital Management."
+    },
+    {
+      "title": "The most bearish post-midterm scenario that could take the S&P 500 down 10%",
+      "link": "https://www.cnbc.com/2026/11/03/the-most-bearish-post-midterm-scenario-that-could-take-the-sp-500-down-10percent.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 16:00:08 GMT",
+      "summary": "The S&amp;P 500 could wipe out its entire 2026 gain if this particular midterm election result happens."
+    },
+    {
+      "title": "Stocks making the biggest moves midday: Apple, Palantir, Nvidia, Coinbase, Bloom Energy & more",
+      "link": "https://www.cnbc.com/2026/11/03/stocks-making-the-biggest-moves-midday-aapl-pltr-nvda-coin-be.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:25:27 GMT",
+      "summary": "Here are some of the companies making headlines in midday trading."
+    },
+    {
+      "title": "Crude oil prices fall for second day as market hopes for diplomatic resolution to Iran war",
+      "link": "https://www.cnbc.com/2026/11/03/oil-prices-climb-after-us-reportedly-strikes-irans-qeshm-island.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 16:01:39 GMT",
+      "summary": "The rebound in oil prices come a day after the U.S. and Iranian presidents signalled they are open to a diplomatic solution to Iran war."
+    },
+    {
+      "title": "Midterm elections could jolt stocks if Democrats sweep Congress",
+      "link": "https://www.cnbc.com/2026/11/03/midterm-election-stock-market.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:05:18 GMT",
+      "summary": "Wall Street weighs how the 2026 midterms could affect stocks, Treasury yields, artificial intelligence, energy prices, banks, defense and healthcare."
+    },
+    {
+      "title": "Apple stock sinks as global memory crisis hurts profits, giving Ternus his first big test",
+      "link": "https://www.cnbc.com/2026/11/03/apple-earnings-john-ternus-faces-first-test-amid-high-memory-costs.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 14:38:03 GMT",
+      "summary": "In John Ternus' first earnings report as CEO, Apple issued a gross margin forecast that disappointed Wall Street."
+    },
+    {
+      "title": "What the 2026 midterm elections could mean for Trump's final two years",
+      "link": "https://www.cnbc.com/2026/11/03/midterm-elections-congress-trump-democrats-republicans.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:29:24 GMT",
+      "summary": "Oddsmakers and public polls place Democrats in a favorable position ahead of Election Day."
+    },
+    {
+      "title": "The 'poison pill' ballot measure that could kill the California billionaire tax",
+      "link": "https://www.cnbc.com/2026/11/03/poison-pill-ballot-measure-could-kill-california-billionaire-tax-.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:23:31 GMT",
+      "summary": "The strongest challenge to California's billionaire tax could be a competing ballot measure that bans state taxes on retirement accounts, say tax experts."
+    },
+    {
+      "title": "Job openings posted big September gain in positive sign for labor market ahead of payrolls report",
+      "link": "https://www.cnbc.com/2026/11/03/job-openings-posted-big-september-gain-in-positive-sign-for-labor-market-ahead-of-payrolls-report.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 16:10:21 GMT",
+      "summary": "The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones consensus outlook for 7.15 million"
+    },
+    {
+      "title": "Russia confirms new Ukraine peace talks as Melania Trump prepares to host ceasefire meeting",
+      "link": "https://www.cnbc.com/2026/11/03/russia-ukraine-peace-talks-abu-dhabi-trump-putin-xi.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:25:57 GMT",
+      "summary": "Russia confirmed Ukraine peace talks in Abu Dhabi next week and signaled a possible Trump-Putin-Xi summit, raising questions over Kyiv's role in negotiations."
+    },
+    {
+      "title": "This casino stock has fallen for 17 weeks in a row. Katie Stockton says it could be due for a bounce",
+      "link": "https://www.cnbc.com/2026/11/03/mgm-resorts-stock-rebound-technical-analysis.html",
+      "source": "CNBC",
+      "published": "Tue, 03 Nov 2026 18:30:25 GMT",
+      "summary": "MGM Resorts shares could be poised for a rebound after a 17-week decline."
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI Market Overview",
+      "body": "Markets were mixed this morning with clear divergence. Nasdaq (+1.1%) and Russell 2000 (+0.8%) led the upside. Dow Jones (-0.2%) lagged.\n\nS&P 500 at 7,587 (+0.61%). Nasdaq at 25,437 (+1.08% (tech-led)). Dow at 51,873 (-0.21%). Russell 2000 at 2,828 (+0.78%, outperforming large caps).\n\nVIX at 20.4 \u2014 modest anxiety, investors eyeing downside risks.\n\nTop stock picks this morning: GE ($321.1, +1.7%). These names show the strongest combination of technical momentum and value signals."
+    },
+    {
+      "title": "Stock Picks",
+      "body": "Based on technical analysis of 1 qualifying names, the strongest BUY signals are:  GE at $321.09 (\u25b2+1.68%) \u2014 RSI 58, above 20d MA with momentum, strong 5d momentum (+6.6%). These recommendations combine RSI momentum, moving average positioning, and volume confirmation. Always perform your own due diligence before trading. On the watch list (potential reversals): ORCL (RSI 47), MRK (RSI 46), AAPL (RSI 39)."
+    },
+    {
+      "title": "Sector Analysis",
+      "body": "Leading: Tech (XLK) (+1.6%). Lagging: Consumer Disc (XLY) (-0.7%). 2.2% spread suggests moderate sector rotation. Only 3/6 sectors green \u2014 selective market."
+    },
+    {
+      "title": "Commodities Brief",
+      "body": "Gold slipping -0.7% to $3,942. Crude flat at $95.83. Silver moved -1.9%."
+    },
+    {
+      "title": "FX Overview",
+      "body": "Dollar mixed vs majors. AUDUSD weakening (-0.8%). USDJPY strengthening (+0.6%). USDCHF weakening (-0.5%)."
+    },
+    {
+      "title": "Macro Context",
+      "body": "S&P 500 sits modestly below its 30-day level (-2.8%)."
+    }
+  ],
+  "summary": "S&P 500: 7587.31  \u25b2 +0.61%\nNasdaq: 25436.62  \u25b2 +1.08%\nDow Jones: 51872.84  \u25bc -0.21%\nRussell 2000: 2827.86  \u25b2 +0.78%\nGold: 3942.4  \u25bc -0.69%\nSilver: 49.76  \u25bc -1.90%\nCrude Oil: 95.83  \u25bc -0.65%\nNatural Gas: 2.88  \u25b2 +0.77%\nEUR/USD: 1.12  \u25b2 +0.38%\nGBP/USD: 1.34  \u25b2 +0.29%\nUSD/JPY: 158.55  \u25b2 +0.56%\nUSD/CHF: 0.82  \u25bc -0.52%"
+}
